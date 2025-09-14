@@ -281,20 +281,23 @@ function construireInfoLiens (donnees)
 	return infoLiens;
 }
 
-function creer_info_flex (donnees) {
+// Construis un "info-flex" pour un "info-bloc"
+function construireInfoFlex (donnees)
+{	
+	// Création d'un "info-flex"
+	let infoFlex = document.createElement('div');
+	infoFlex.classList.add('info-flex');
 	
-	// Créer "info-flex"
-	info_flex = document.createElement('div');
-	info_flex.classList.add('info-flex');
+	// Création d'un "info-photo-bloc" et "info-contenu"
+	let infoPhotoBloc = construireInfoPhotoBloc(donnees);
+	let infoContenu = construireInfoContenu(donnees);
 	
-	// Créer "info-photo-box"
-	info_photo_box = document.createElement('div');
-	info_photo_box.classList.add('info-photo-box');
+	// Ajout d'éléments
+	infoFlex.appendChild(infoPhotoBloc);
+	infoFlex.appendChild(infoContenu);
 	
-	// Créer "info-photo"
-	info_photo = document.createElement('img');
-	info_photo.classList.add('info-photo');
-	info_photo.src = donnees['Media']
+	return infoFlex;
+}
 	
 	// Créer "info-content"
 	info_content = document.createElement('div');
