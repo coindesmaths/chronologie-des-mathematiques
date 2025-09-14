@@ -1,37 +1,33 @@
 
-@media (prefers-color-scheme: dark) {
+:root {
+
+	/* Couleurs */
+	--color-background: rgb(36, 37, 37);
+	--color-base-font: rgb(197, 192, 183);
 	
-	:root {
+	--color-periode-barre: rgb(216, 91, 72);
+	--color-periode-barre-contrast: rgb(254, 107, 84);
+	--color-periode-date: #777;
 	
-		/* Couleurs */
-		--color-background: rgb(36, 37, 37);
-		--color-base-font: rgb(197, 192, 183);
-		
-		--color-periode-barre: rgb(216, 91, 72);
-		--color-periode-barre-contrast: rgb(254, 107, 84);
-		--color-periode-date: #777;
-		
-		--color-info-lien-font: rgb(244, 92, 49);
-		--color-info-lien-border: rgb(125, 125, 125);
-		--color-info-lien-background: rgb(87, 87, 87);
-		--color-info-lien-border-hover: #ccc;
-		--color-info-lien-background-hover: #aaa;
-		
-		--color-barre-outils-border: rgb(218, 212, 203);
-		--color-barre-outils-background: rgb(36, 37, 37);
-		
-		--color-regle-date: rgb(143, 141, 135);
-		--color-regle-date-font: rgb(143, 141, 135);
-		--color-regle-date-clair: rgb(92, 90, 86);
-		--color-regle-date-clair-font: rgb(92, 90, 86);
-	}
+	--color-info-lien-font: rgb(244, 92, 49);
+	--color-info-lien-border: rgb(125, 125, 125);
+	--color-info-lien-background: rgb(87, 87, 87);
+	--color-info-lien-border-hover: #ccc;
+	--color-info-lien-background-hover: #aaa;
 	
-	* {
-		scrollbar-color: #2b2d2d #4e5151;
-	}
+	--color-barre-outils-border: rgb(218, 212, 203);
+	--color-barre-outils-background: rgb(36, 37, 37);
 	
-	.outil:not(:first-of-type) img, .info-fermer img {
-		filter: invert(.8);
-	}
-	
+	--color-regle-date: rgb(143, 141, 135);
+	--color-regle-date-font: rgb(143, 141, 135);
+	--color-regle-date-clair: rgb(92, 90, 86);
+	--color-regle-date-clair-font: rgb(92, 90, 86);
+}
+
+* {
+	scrollbar-color: #2b2d2d #4e5151;
+}
+
+.outil:not(:first-of-type) img, .info-fermer img {
+	filter: invert(.8);
 }
