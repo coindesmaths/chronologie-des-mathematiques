@@ -1,54 +1,89 @@
 
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
-function annee_vers_posx (annee) {
-	min_annee = -5000;
-	max_annee = new Date().getFullYear();
-	// console.log(max_annee);
-	// return 0.2 * (annee - min_annee);
-	// return 2555.73 * Math.exp(0.0005 * annee) * 16 / 42 * 0.15;
-	// return 0.1 * ((-1000 <= annee) ? 2 * annee + 3000 : (annee + 20000) / 19);
-	return 1.25 + 0.1 * ((-1000 <= annee) ? 2 * annee + 2200 : (annee + 5000) / 20);
-	// return ((0 <= annee) ? 3 * annee + 3000 : 3 * (annee + 20000) / 20);
-	// return ((-700 <= annee) ? 2.5 * annee + 3000 : 125 * (annee + 20000) / 1930);
-}
+const IMG_COINDESMATHS = 'assets/coindesmaths.png';
+const IMG_CROIX = 'assets/croix.svg';
+const IMG_ZOOM_PLUS = 'assets/zoom-plus.svg';
+const IMG_ZOOM_MOINS = 'assets/zoom-moins.svg';
+const IMG_INFO = 'assets/info.svg';
 
-function annees_vers_width (annee1, annee2) {
-	posx1 = annee_vers_posx(annee1);
-	posx2 = annee_vers_posx(annee2);
-	return (posx2 - posx1) + 'em';
-}
+const DATES_BOLD = [
+	-5000,	-1000,	- 900,	- 800,	- 700,
+	- 600,	- 500,	- 400,	- 300,	- 200,
+	- 100,	    0,	  100,	  200,	  300,	
+	  400,	  500,	  600,	  700,	  800,	
+	  900,	 1000,	 1100,	 1200,	 1300,	
+	 1400,	 1500,	 1600,	 1700,	 1800,	
+	 1900,	 2000
+];
 
-// console.log(annee_vers_posx(2024));
+const DATES_LIGHT = [
+	-5000,	-4000,	-3000,	-2000,	
+	-1000,	- 980,	- 960,	- 940,	- 920,	
+	- 900,	- 880,	- 860,	- 840,	- 820,	
+	- 800,	- 780,	- 760,	- 740,	- 720,	
+	- 700,	- 680,	- 660,	- 640,	- 620,	
+	- 600,	- 580,	- 560,	- 540,	- 520,	
+	- 500,	- 480,	- 460,	- 440,	- 420,	
+	- 400,	- 380,	- 360,	- 340,	- 320,	
+	- 300,	- 280,	- 260,	- 240,	- 220,	
+	- 200,	- 180,	- 160,	- 140,	- 120,	
+	- 100,	-  80,	-  60,	-  40,	-  20,	
+	    0,	   20,	   40,	   60,	   80,	
+	  100,	  120,	  140,	  160,	  180,	
+	  200,	  220,	  240,	  260,	  280,	
+	  300,	  320,	  340,	  360,	  380,	
+	  400,	  420,	  440,	  460,	  480,	
+	  500,	  520,	  540,	  560,	  580,	
+	  600, 	  620,	  640,	  660,	  680,	
+	  700,	  720,	  740,	  760,	  780,	
+	  800,	  820,	  840,	  860,	  880,	
+	  900,	  920,	  940, 	  960,	  980,	
+	 1000,	 1020,	 1040,	 1060,   1080,	
+	 1100,	 1120,	 1140,	 1160,	 1180,	
+	 1200,	 1220,	 1240,	 1260,	 1280,	
+	 1300,	 1320,	 1340,	 1360,	 1380,	
+	 1400,	 1420,	 1440,	 1460,	 1480,	
+	 1500,	 1520,	 1540,	 1560,	 1580,	
+	 1600,	 1620,	 1640,	 1660,	 1680,	
+	 1700,	 1720,	 1740,	 1760,	 1780,	
+	 1800,	 1820,	 1840,	 1860,	 1880,	
+	 1900,	 1920,	 1940,	 1960,	 1980,	
+	 2000,	 2020
+];
 
-// Initialiser la longueur de "timeline-content"
-max_posx = annee_vers_posx(new Date().getFullYear());
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
-
-function organiser_donnees (json_donnees) {
-	annee_max = [];
-	donnees = [];
-	for (const mathematicien of json_donnees) {
-		i = 0;
-		while (i < annee_max.length && mathematicien['Year'] < annee_max[i]) {
-			i++;
+// Organise et retourne les données des barres pour les empiler facilement
+function organiserDonneesJSON(donneesJSON)
+{	
+	// Initialisation des données
+	let donnees = [];
+	
+	// Boucle sur les périodes dans les données
+	for (let periode of donneesJSON)
+	{
+		// Recherche de la première ligne pouvant afficher sans superposer
+		let annee = periode['Year'];
+		let j = donnees.findIndex(d => annee > d.at(-1)['End Year']);
+		
+		// Distinction si la recherche a trouvé quelque chose
+		if (j < 0)
+		{
+			// Si une ligne est disponible, ajout de la période
+			donnees.push([periode]);
 		}
-		if (i < annee_max.length) {
-			annee_max[i] = mathematicien['End Year'];
-			donnees[i].push(mathematicien);
-		} else {
-			annee_max.push(mathematicien['End Year']);
-			donnees.push([mathematicien]);
+		else
+		{
+			//Sinon, création d'une nouvelle ligne
+			donnees[j].push(periode);
 		}
 	}
 	return donnees;
 }
 
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
-DATES_BOLD = [-5000, -1000, -900, -800, -700, -600, -500, -400, -300, -200, -100, 0, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400, 1500, 1600, 1700, 1800, 1900, 2000];
-DATES_LIGHT = [-5000, -4000, -3000, -2000, -1000, -980, -960, -940, -920, -900, -880, -860, -840, -820, -800, -780, -760, -740, -720, -700, -680, -660, -640, -620, -600, -580, -560, -540, -520, -500, -480, -460, -440, -420, -400, -380, -360, -340, -320, -300, -280, -260, -240, -220, -200, -180, -160, -140, -120, -100, -80, -60, -40, -20, 0, 20, 40, 60, 80, 100, 120, 140, 160, 180, 200, 220, 240, 260, 280, 300, 320, 340, 360, 380, 400, 420, 440, 460, 480, 500, 520, 540, 560, 580, 600, 620, 640, 660, 680, 700, 720, 740, 760, 780, 800, 820, 840, 860, 880, 900, 920, 940, 960, 980, 1000, 1020, 1040, 1060, 1080, 1100, 1120, 1140, 1160, 1180, 1200, 1220, 1240, 1260, 1280, 1300, 1320, 1340, 1360, 1380, 1400, 1420, 1440, 1460, 1480, 1500, 1520, 1540, 1560, 1580, 1600, 1620, 1640, 1660, 1680, 1700, 1720, 1740, 1760, 1780, 1800, 1820, 1840, 1860, 1880, 1900, 1920, 1940, 1960, 1980, 2000, 2020];
 
 function creer_regles_dates () {
 	
