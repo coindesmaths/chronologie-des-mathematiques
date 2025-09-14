@@ -364,13 +364,22 @@ function verifierAffichageDates()
 	}
 }
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
-const timeline_content = document.getElementById("timeline-content");
+// Affiche un bloc info
+function afficherInfoBloc(id)
+{
+	let infoBloc = document.getElementById(id);
+	infoBloc.style.visibility = 'visible';
+}
 
-//console.log(max_posx + 'em');
-// timeline_content.style.width = max_posx + 'em';
+// Fermer un bloc info
+function fermerInfoBloc (id)
+{
+	let infoBloc = document.getElementById(id);
+	infoBloc.style.visibility = 'hidden';
+}
 
-creer_regles_dates();
 
 donnees = organiser_donnees(data);
 console.log(donnees);
