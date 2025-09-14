@@ -325,7 +325,7 @@ function construireInfoLiens (donnees) {
 	infoLiens.classList.add('info-liens');
 	
 	// Ajout d'une règle horizontale
-	infoLiens.insertAdjacentHTML('beforeend', '<hr style="margin-top: 15px;">');
+	infoLiens.insertAdjacentHTML('beforeend', '<hr/>');
 	
 	// Ajout des liens
 	let liens = donnees['Articles URLs'].split(',');
