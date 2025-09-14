@@ -8,6 +8,7 @@ const IMG_COINDESMATHS = 'assets/coindesmaths.webp';
 const IMG_CROIX = 'assets/croix.svg';
 const IMG_ZOOM_PLUS = 'assets/zoom-plus.svg';
 const IMG_ZOOM_MOINS = 'assets/zoom-moins.svg';
+const IMG_OUTILS = 'assets/outils.svg';
 const IMG_INFO = 'assets/info.svg';
 
 const DATES_BOLD = [
