@@ -299,24 +299,20 @@ function construireInfoFlex (donnees)
 	return infoFlex;
 }
 
-// Construit un "info-bloc" pour la frise chronologique
+// Construit un "info-modal" pour la frise chronologique
 function construireInfoBloc(donnees)
-{	
-	// Création d'un "info-bloc"
-	let infoBloc = document.createElement('div');
-	infoBloc.classList.add('info-bloc');
-	infoBloc.setAttribute("id", donnees['Headline']);
-	
+{
 	// Création d'un "info-modal"
-	let infoModal = document.createElement('div');
+	let infoModal = document.createElement('dialog');
+	infoModal.method = 'dialog';
 	infoModal.classList.add('info-modal');
+	infoModal.setAttribute("id", donnees['Headline']);
 	
 	// Création d'un "info-flex"
 	let infoFlex = construireInfoFlex(donnees);
 	
 	// Ajout d'éléments
 	infoModal.appendChild(infoFlex);
-	infoBloc.appendChild(infoModal);
 	
 	// Ajout d'un "info-liens"
 	if (donnees['Articles URLs'])
@@ -325,7 +321,7 @@ function construireInfoBloc(donnees)
 		infoModal.appendChild(infoLiens);
 	}
 	
-	return infoBloc;
+	return infoModal;
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
