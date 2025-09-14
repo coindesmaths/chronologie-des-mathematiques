@@ -332,12 +332,38 @@ function construireInfoBloc(donnees)
 
 var zoom = 1;
 
+function zoomer()
+{
+	if (zoom < 2)
+	{
+		zoom *= 2;
+		calculerPositions(zoom);
+		frise.scrollLeft *= 2;
+		verifierAffichageDates();
 	}
-	
-	return info_liens;
 }
 
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+function dezoomer()
+{
+	if (0.25 < zoom)
+	{
+		zoom /= 2;
+		frise.scrollLeft /= 2;
+		calculerPositions();
+		verifierAffichageDates();
+	}
+}
+
+// Vérifie l'affichage des dates en fonction du zoom
+function verifierAffichageDates()
+{
+	let dates = document.getElementsByClassName('periode-date');
+	for (date of dates)
+	{
+		date.style.display = zoom < 1 ? 'none' : 'inline';
+	}
+}
+
 
 const timeline_content = document.getElementById("timeline-content");
 
