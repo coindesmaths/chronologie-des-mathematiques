@@ -33,7 +33,7 @@ html, body {
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 html, body {
-	font-family: "Source Sans Pro", Helvetica, sans-serif;
+	font-family: Source Sans Pro, Helvetica, sans-serif;
 	color: var(--color-base-font);
 	background-color: var(--color-background);
 }
@@ -55,6 +55,14 @@ h1 {
             transform: translateX(-50%);
 	z-index: 1;
 	background: var(--color-background);
+}
+
+p {
+	line-height: 1.6;
+}
+
+.math {
+	font-family: Computer Modern, Source Sans Pro, Helvetica, sans-serif;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -228,8 +236,7 @@ h1 {
 
 .info-wrapper {
 	overflow: auto;
-	max-width: 80vw;
-	max-height: 80vh;
+	max-height: inherit;
 }
 
 .info-flex {
@@ -253,7 +260,6 @@ h1 {
 
 .info-photo {
 	width: 100%;
-	max-height: 90%;
 	-o-object-fit: cover;
 	   object-fit: cover;
 	margin: auto;
@@ -272,7 +278,7 @@ h1 {
 
 .info-fermer {
     float: right;
-    margin: 1em 0 .2em 1em;
+    margin: 1em 0 0 1em;
 }
 
 .info-fermer img {
@@ -281,7 +287,7 @@ h1 {
 }
 
 .info-liens {
-	padding: 0 1.25em 1.25em 1.25em;
+	padding: 0 1em 1em 1em;
 }
 
 .info-liens hr {
