@@ -80,7 +80,7 @@ function organiserDonneesJSON(donneesJSON) {
 		
 		// Recherche de la première ligne pouvant afficher sans superposer
 		let annee = periode['Year'];
-		let j = donnees.findIndex(d => annee > d.at(-1)['End Year']);
+		let j = donnees.findIndex(d => annee > d.at(-1)['End Year'] + 1);
 		
 		// Distinction si la recherche a trouvé quelque chose
 		if (j < 0) {
