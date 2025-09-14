@@ -1,0 +1,42 @@
+/* Design for desktop displays from 1280×720 to 1920×1080 */
+/* Design for tablet displays  from  601×962 to 1280× 800 */
+/* Design for mobile displays  from  360×640 to  414× 896 */
+
+@media screen and (max-device-width: 962px),
+		screen and (max-width: 500px) {
+	html {
+		font-size: 5vw;
+	}
+	
+    h1 {
+		font-size: 1.2em;
+	}
+	
+	#timeline-content {
+		padding-top: 3.2em;
+	}
+	
+	.info-boite {
+		max-width: 80%;
+		max-height: 80%;
+		font-size: 42px;
+	}
+	
+	.info-flex {
+		flex-wrap: wrap;
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+	
+	.info-content p {
+		padding: 0 1em 0 1em;
+	}
+	
+	.info-photo-box {
+		width: 60%;
+		max-height: none;
+		padding: 0.5em 1.25em 1em 1.25em;
+		font-size: 0.9em;
+	}
+
+}

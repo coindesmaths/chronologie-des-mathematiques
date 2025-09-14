@@ -1,0 +1,102 @@
+data = [
+    {
+        "Year": -550,
+        "End Year": -490,
+        "Headline": "Pythagore",
+        "Text": "<p><b>Pythagore</b> (-550--490) est un math\u00e9maticien reconnu.</p>",
+        "Articles URLs": "https://coindesmaths.fr/theoreme-de-pythagore-dsm4/",
+        "Articles Sujets": "Th\u00e9or\u00e8me de Pythagore",
+        "Media": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Kapitolinischer_Pythagoras_adjusted.jpg",
+        "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Pythagore\" target=\"_blank\" title=\"Pythagore\">Pythagore</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Kapitolinischer_Pythagoras_adjusted.jpg\" target=\"_blank\" title=\"Pythagore sur Wikimedia\">Wikimedia</a>)"
+    },
+    {
+        "Year": -333,
+        "End Year": -285,
+        "Headline": "Euclide",
+        "Text": "<p><b>Euclide</b> (-333--285) est un math\u00e9maticien reconnu.</p>",
+        "Articles URLs": "https://coindesmaths.fr/somme-des-angles-dun-triangle-dsm3/,https://coindesmaths.fr/identites-remarquables-dsm9/",
+        "Articles Sujets": "Somme des angles d\u2019un triangle,Identit\u00e9s remarquables",
+        "Media": "https://upload.wikimedia.org/wikipedia/commons/3/30/Euklid-von-Alexandria_1.jpg",
+        "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Euclide\" target=\"_blank\" title=\"Euclide\">Euclide</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Euklid-von-Alexandria_1.jpg\" target=\"_blank\" title=\"Euclide sur Wikimedia\">Wikimedia</a>)"
+    },
+    {
+        "Year": -287,
+        "End Year": -212,
+        "Headline": "Archim\u00e8de",
+        "Text": "<p><b>Archim\u00e8de</b> (-287--212) est un math\u00e9maticien reconnu.</p>",
+        "Articles URLs": "https://coindesmaths.fr/encadrement-de-pi-dsm6/",
+        "Articles Sujets": "Encadrement de \u03c0",
+        "Media": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Retrato_de_un_erudito_%28%C2%BFArqu%C3%ADmedes%3F%29%2C_por_Domenico_Fetti.jpg",
+        "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Archim\u00e8de\" target=\"_blank\" title=\"Archim\u00e8de\">Archim\u00e8de</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Retrato_de_un_erudito_%28%C2%BFArqu%C3%ADmedes%3F%29%2C_por_Domenico_Fetti.jpg\" target=\"_blank\" title=\"Archim\u00e8de sur Wikimedia\">Wikimedia</a>)"
+    },
+    {
+        "Year": 750,
+        "End Year": 846,
+        "Headline": "Al-Khw\u0101rizm\u012b",
+        "Text": "<p><b>Mu\u1e25ammad ibn M\u016bs\u0101 Al-Khw\u0101rizm\u012b</b> (750-846) est un math\u00e9maticien reconnu.</p>",
+        "Articles URLs": "https://coindesmaths.fr/identites-remarquables-dsm9/",
+        "Articles Sujets": "Identit\u00e9s remarquables",
+        "Media": "https://upload.wikimedia.org/wikipedia/commons/3/31/1983_CPA_5426.jpg",
+        "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Al-Khw\u00e2rizm\u00ee\" target=\"_blank\" title=\"Al-Khw\u00e2rizm\u00ee\">Al-Khw\u00e2rizm\u00ee</a> (<a href=\"https://commons.wikimedia.org/wiki/File:1983_CPA_5426.jpg\" target=\"_blank\" title=\"Al-Khw\u00e2rizm\u00ee sur Wikimedia\">Wikimedia</a>)"
+    },
+    {
+        "Year": 1564,
+        "End Year": 1642,
+        "Headline": "Galil\u00e9e",
+        "Text": "<p><b>Galil\u00e9e</b> (1564-1642) est un math\u00e9maticien reconnu.</p>",
+        "Articles URLs": "https://coindesmaths.fr/somme-des-entiers-impairs-dsm7/",
+        "Articles Sujets": "Somme des entiers impairs",
+        "Media": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Justus_Sustermans_-_Portrait_of_Galileo_Galilei%2C_1636.jpg",
+        "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Galil\u00e9e (savant)\" target=\"_blank\" title=\"Galil\u00e9e (savant)\">Galil\u00e9e (savant)</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Justus_Sustermans_-_Portrait_of_Galileo_Galilei%2C_1636.jpg\" target=\"_blank\" title=\"Galil\u00e9e (savant) sur Wikimedia\">Wikimedia</a>)"
+    },
+    {
+        "Year": 1622,
+        "End Year": 1703,
+        "Headline": "Viviani",
+        "Text": "<p><b>Vincenzo  Viviani</b> (1622-1703) est un math\u00e9maticien reconnu.</p>",
+        "Articles URLs": "https://coindesmaths.fr/theoreme-de-viviani-dsm2/",
+        "Articles Sujets": "Th\u00e9or\u00e8me de Viviani",
+        "Media": "https://upload.wikimedia.org/wikipedia/commons/0/06/Vincenzo_Viviani.jpeg",
+        "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Vincenzo Viviani\" target=\"_blank\" title=\"Vincenzo Viviani\">Vincenzo Viviani</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Vincenzo_Viviani.jpeg\" target=\"_blank\" title=\"Vincenzo Viviani sur Wikimedia\">Wikimedia</a>)"
+    },
+    {
+        "Year": 1777,
+        "End Year": 1855,
+        "Headline": "Gauss",
+        "Text": "<p><b>Carl Friedrich Gauss</b> (1777-1855) est un math\u00e9maticien reconnu.</p>",
+        "Articles URLs": "https://coindesmaths.fr/somme-des-entiers-dsm1/",
+        "Articles Sujets": "Somme des entiers",
+        "Media": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Carl_Friedrich_Gauss.jpg",
+        "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Carl Friedrich Gauss\" target=\"_blank\" title=\"Carl Friedrich Gauss\">Carl Friedrich Gauss</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Carl_Friedrich_Gauss.jpg\" target=\"_blank\" title=\"Carl Friedrich Gauss sur Wikimedia\">Wikimedia</a>)"
+    },
+    {
+        "Year": 1789,
+        "End Year": 1857,
+        "Headline": "Cauchy",
+        "Text": "<p><b>Augustin Louis Cauchy</b> (1789-1857) est un math\u00e9maticien reconnu.</p>",
+        "Articles URLs": "https://coindesmaths.fr/inegalite-de-cauchy-schwarz-dsm10/",
+        "Articles Sujets": "In\u00e9galit\u00e9 de Cauchy-Schwarz",
+        "Media": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Augustin_Louis_Cauchy.jpg",
+        "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Augustin Louis Cauchy\" target=\"_blank\" title=\"Augustin Louis Cauchy\">Augustin Louis Cauchy</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Augustin_Louis_Cauchy.jpg\" target=\"_blank\" title=\"Augustin Louis Cauchy sur Wikimedia\">Wikimedia</a>)"
+    },
+    {
+        "Year": 1822,
+        "End Year": 1911,
+        "Headline": "Galton",
+        "Text": "<p><b>Francis Galton</b> (1822-1911) est un math\u00e9maticien reconnu.</p>",
+        "Articles URLs": "https://coindesmaths.fr/planche-de-galton/",
+        "Articles Sujets": "Planche de Galton",
+        "Media": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Sir_Francis_Galton%2C_1890s.jpg",
+        "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Francis Galton\" target=\"_blank\" title=\"Francis Galton\">Francis Galton</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Sir_Francis_Galton%2C_1890s.jpg\" target=\"_blank\" title=\"Francis Galton sur Wikimedia\">Wikimedia</a>)"
+    },
+    {
+        "Year": 1843,
+        "End Year": 1921,
+        "Headline": "Schwarz",
+        "Text": "<p><b>Hermann Amandus Schwarz</b> (1843-1921) est un math\u00e9maticien reconnu.</p>",
+        "Articles URLs": "https://coindesmaths.fr/inegalite-de-cauchy-schwarz-dsm10/",
+        "Articles Sujets": "In\u00e9galit\u00e9 de Cauchy-Schwarz",
+        "Media": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Karl_Hermann_Amandus_Schwarz.jpg",
+        "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Hermann Amandus Schwarz\" target=\"_blank\" title=\"Hermann Amandus Schwarz\">Hermann Amandus Schwarz</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Karl_Hermann_Amandus_Schwarz.jpg\" target=\"_blank\" title=\"Hermann Amandus Schwarz sur Wikimedia\">Wikimedia</a>)"
+    }
+]
