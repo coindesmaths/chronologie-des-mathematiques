@@ -408,25 +408,32 @@ function calculerPositions()
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
-donnees = organiser_donnees(data);
+// Organisation des données
+let donnees = organiserDonneesJSON(data);
 console.log(donnees);
 
-// Créer toutes les barres de mathématiciens
+// Création de la graduation de la frise chronologique
+construireReglesDates();
+
+// Création de toutes les barres de mathématiciens
+let friseContenu = document.getElementById("frise-contenu");
 for (let i = 0; i < donnees.length; i++) {
-	ligne = creer_timeline_ligne();
-	for (const mathematicien of donnees[i]) {
-		barre = creer_mathematicien_barre(mathematicien);
+	let ligne = construireLigneFrise();
+	for (let mathematicien of donnees[i]) {
+		let barre = construirePeriodeBarre(mathematicien);
 		ligne.appendChild(barre);
 	}
-	timeline_content.appendChild(ligne);
+	friseContenu.appendChild(ligne);
 }
 
-// Créer toutes les "info-bio"
-for (const mathematicien of data) {
-	info_bios = document.getElementById('timeline-bios');
-	info_bio = creer_info_bio(mathematicien);
-	info_bios.appendChild(info_bio);
-}// Ajout listeners aux outils
+// Création de toutes les "info-bloc"
+let friseBios = document.getElementById('frise-biographies');
+for (let mathematicien of data) {
+	let infoBloc = construireInfoBloc(mathematicien);
+	friseBios.appendChild(infoBloc);
+}
+
+// Ajout listeners aux outils
 let outilZoom = document.getElementById('outil-zoom');
 outilZoom.addEventListener('click', zoomer);
 let outilDezoom = document.getElementById('outil-dezoom');
