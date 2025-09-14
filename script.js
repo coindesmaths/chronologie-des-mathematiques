@@ -54,6 +54,18 @@ const DATES_LIGHT = [
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
+let periodesNonTerminees = [];
+// Ajoute l'année courante comme année de fin pour les périodes non terminée
+function gestionPeriodesNonTerminees(donneesJSON) {
+	let anneeCourante = new Date().getFullYear();
+	for (let periode of donneesJSON) {
+		if (periode['End Year'] === null) {
+			periode['End Year'] = anneeCourante;
+			periodesNonTerminees.push(periode['Headline']);
+		}
+	}
+}
+
 // Organise et retourne les données des barres pour les empiler facilement
 function organiserDonneesJSON(donneesJSON) {
 	
@@ -195,6 +207,7 @@ function construirePeriodeBarre(donnees) {
 	barre.style.width = longueur;
 	barre.donnees = donnees;
 	barre.setAttribute("id", `barre:${donnees['Headline']}`);
+	if (periodesNonTerminees.includes(titre)) barre.classList.add('en-vie');
 	
 	// Construire "periode-lien" et "date"
 	let lien = construirePeriodeLien(donnees);
