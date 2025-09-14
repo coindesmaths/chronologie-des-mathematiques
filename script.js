@@ -380,6 +380,33 @@ function fermerInfoBloc (id)
 	infoBloc.style.visibility = 'hidden';
 }
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+
+// Calcule les positions des règles et des barres
+function calculerPositions()
+{
+	// Position des règles
+	let regles = document.getElementsByClassName('regle-date');
+	for (regle of regles)
+	{
+		let posX = anneeVersPositionX(regle.date);
+		regle.style.left = `${posX}em`;
+	}
+	
+	// Position et longueur des barres
+	barres = document.getElementsByClassName('periode-barre');
+	for (barre of barres)
+	{
+		let annee1 = barre.donnees['Year'];
+		let annee2 = barre.donnees['End Year'];
+		let posX = anneeVersPositionX(annee1);
+		let longueur = calculerLongueurBarre(annee1, annee2);
+		barre.style.left = `${posX}em`;
+		barre.style.width = longueur;
+	}
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
 donnees = organiser_donnees(data);
 console.log(donnees);
