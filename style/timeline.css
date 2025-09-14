@@ -11,7 +11,8 @@ html, body {
 
 #main {
 	height: 100%;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 #frise {
@@ -20,6 +21,8 @@ html, body {
 }
 
 #frise-wrapper {
+	height: -webkit-fit-content;
+	height: -moz-fit-content;
 	height: fit-content;
 	min-height: 100%;
 	position: relative;
@@ -40,9 +43,13 @@ h1 {
 	text-align: center;
 	margin-top: 0.9em;
 	position: fixed;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
 	z-index: 1;
 	background: var(--color-background);
 }
@@ -137,7 +144,9 @@ h1 {
 	height: 1em;
 	border-radius: 1em;
 	border: 0.125em solid var(--color-periode-barre-contrast);
-	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	    -ms-transform: translateX(-50%);
+	        transform: translateX(-50%);
 	background-color: var(--color-periode-barre);
 }
 
@@ -150,13 +159,18 @@ h1 {
 	color: var(--color-base-font);
 	text-decoration: none;
 	margin: auto;
+	width: -webkit-max-content;
+	width: -moz-max-content;
 	width: max-content;
 	background: var(--color-background);
 	padding: 0.5em;
 	border-radius: 1em;
 	border: 0.125em solid var(--color-base-font);
-	transform: translateX(-50%) translateX(0.5em) translateY(1.075em);
+	-webkit-transform: translateX(-50%) translateX(0.5em) translateY(1.075em);
+	    -ms-transform: translateX(-50%) translateX(0.5em) translateY(1.075em);
+	        transform: translateX(-50%) translateX(0.5em) translateY(1.075em);
 	font-weight: bold;
+	-webkit-transition: 2s;
 	transition: 2s;
 }
 
@@ -166,7 +180,9 @@ h1 {
 	position: absolute;
 	top: -1.1em;
 	left: 50%;
-	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	    -ms-transform: translateX(-50%);
+	        transform: translateX(-50%);
 	width: 0;
 	height: 0;
 	border: 0.5em solid transparent;
@@ -193,7 +209,8 @@ h1 {
 	font-size: 1.125em;
 	overflow: auto;
 	z-index: 5;
-    box-shadow: 0 0 0.5rem 500vw rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow: 0 0 0.5rem 500vw rgba(0, 0, 0, 0.6);
+            box-shadow: 0 0 0.5rem 500vw rgba(0, 0, 0, 0.6);
 }
 
 .info-modal a {
@@ -213,12 +230,17 @@ h1 {
 }
 
 .info-flex {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	margin-bottom: 1em;
 }
 
 .info-photo-bloc {
 	width: 35%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
 	float: left;
 	padding: 1.25em 1.25em 0 1.25em;
 	font-size: 0.75em;
@@ -227,13 +249,16 @@ h1 {
 .info-photo {
 	width: 100%;
 	max-height: 90%;
-	object-fit: cover;
+	-o-object-fit: cover;
+	   object-fit: cover;
 	margin: auto;
 	border-radius: 0.625em;
 }
 
 .info-contenu {
 	width: 100%;
+	height: -webkit-fit-content;
+	height: -moz-fit-content;
 	height: fit-content;
 	text-align: justify;
 	padding-right: 1em;
@@ -262,12 +287,39 @@ h1 {
 	display: inline-block;
 	margin: 0.375em 0.375em 0 0;
 	padding: 0.0625em 0.625em;
+	-webkit-transition: background .2s, border .2s;
 	transition: background .2s, border .2s;
 	text-decoration: none;
 }
 
 #informations .info-contenu {
 	padding-left: 1em
+
+#informations .info-flex {
+	-webkit-box-align: stretch;
+	    -ms-flex-align: stretch;
+	        align-items: stretch;
+	-webkit-box-pack: start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start;
+}
+
+	-ms-flex-item-align: stretch;
+	    -ms-grid-row-align: stretch;
+	    align-self: stretch;
+#informations .info-contenu:nth-child(1) {
+	-webkit-box-flex: 4;
+	    -ms-flex: 4;
+	        flex: 4;
+	-webkit-box-ordinal-group: 0;
+	    -ms-flex-order: -1;
+	        order: -1;
+}
+
+#informations .info-contenu:nth-child(2) {
+	-webkit-box-flex: 3;
+	    -ms-flex: 3;
+	        flex: 3;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -278,7 +330,9 @@ h1 {
 	position: fixed;
 	left: 0;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
 	margin: auto;
 	border-radius: 0 1.25em 1.25em 0;
 	border: 0.125em solid var(--color-barre-outils-border);

@@ -24,6 +24,10 @@
 	
 	.info-modal {
 		font-size: 16px !important;
+	input[type='radio'] { 
+		-webkit-transform: none !important; 
+		    -ms-transform: none !important; 
+		        transform: none !important;
 	}
 }
 
@@ -47,9 +51,15 @@ h1 {
 }
 
 .info-flex {
-	flex-wrap: wrap;
-	flex-direction: column-reverse;
-	align-items: center;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: reverse;
+	    -ms-flex-direction: column-reverse;
+	        flex-direction: column-reverse;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
 .info-contenu {
@@ -73,10 +83,17 @@ h1 {
 }
 
 #barre-outils {
-	transform: translateY(-30%);
 	font-size: 16px;
+	-webkit-transform: translateY(-30%);
+	    -ms-transform: translateY(-30%);
+	        transform: translateY(-30%);
 }
 
 #informations .info-contenu {
 	padding-left: 0;
+
+input[type='radio'] { 
+	-webkit-transform: scale(1.5); 
+	    -ms-transform: scale(1.5); 
+	        transform: scale(1.5);
 }
