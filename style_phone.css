@@ -4,6 +4,25 @@
 
 @media screen and (max-device-width: 962px),
 		screen and (max-width: 500px) {
+
+	@media (min-aspect-ratio: 8/5) {
+		
+		#barre-outils {
+			font-size: 20px !important;
+		}
+	}
+
+	@media (min-device-width: 962px) {
+		
+		#barre-outils {
+			font-size: 18px !important;
+		}
+		
+		.info-modal {
+			font-size: 18px !important;
+		}
+	}
+
 	html {
 		font-size: 5vw;
 	}
@@ -28,6 +47,11 @@
 		align-items: center;
 	}
 	
+	.info-contenu {
+		margin-bottom: 0;
+		padding-right: 0;
+	}
+	
 	.info-contenu p {
 		padding: 0 1em 0 1em;
 	}
@@ -45,11 +69,10 @@
 	
 	#barre-outils {
 		transform: translateY(-30%);
-	}
-	
-	.outil img {
-		width: 1em;
-		height: 1em;
+		font-size: 32px;
 	}
 
+	#informations .info-contenu {
+		padding-left: 0;
+	}
 }
