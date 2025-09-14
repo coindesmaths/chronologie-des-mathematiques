@@ -1,0 +1,294 @@
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*				Fonctionnement de la frise					*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%
+}
+
+#main {
+	height: 100%;
+	box-sizing: border-box;
+}
+
+#frise {
+	height: 100%;
+	overflow: auto;
+}
+
+#frise-wrapper {
+	height: fit-content;
+	min-height: 100%;
+	position: relative;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*					Éléments de base						*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+html {
+	font-family: "Source Sans Pro", Helvetica, sans-serif;
+	color: var(--color-base-font);
+	background-color: var(--color-background);
+}
+
+h1 {
+	font-family: Bitter, Georgia, serif;
+	text-align: center;
+	margin-top: 0.9em;
+	position: fixed;
+    width: max-content;
+    left: 50%;
+    transform: translateX(-50%);
+	z-index: 1;
+	background: var(--color-background);
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*					Graduation des dates					*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+#ligne-dates {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: blue;
+    z-index: -2;
+}
+
+.regle-date {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	border-left: 0.125em solid var(--color-regle-date);
+	color: var(--color-regle-date-font);
+	position: absolute;
+	font-weight: bold;
+}
+
+.regle-date.clair {
+	border-left: 0.125em solid var(--color-regle-date-clair);
+	color: var(--color-regle-date-clair-font);
+}
+
+.date-span {
+	position: sticky;
+	top: 0;
+	padding: 0 0.3125em 0 0.3125em;
+	background: var(--color-background);
+	z-index: 1;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*						Périodes							*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.frise-ligne {
+	height: 1.25em;
+}
+
+.periode-barre {
+	padding: 0.125em;
+	height: 0.3125em;
+	text-align: center;
+	border-radius: 0.625em;
+	display: inline-block;
+	position: absolute;
+	background-color: var(--color-periode-barre);
+}
+
+.periode-barre.en-vie {
+	border-radius: 0.625em 0 0 0.625em;
+}
+
+.periode-lien {
+	position: relative;
+	top: -0.7em;
+	text-decoration: none;
+	font-weight: bold;
+	width: inherit;
+	display: inline-block;
+	color: var(--color-base-font);
+	white-space: nowrap;
+}
+
+.periode-date {
+	display: none;
+	color: #777;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*						Évènements							*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+#frise-evenements {
+	padding: 5em 0 0.5em 0;
+}
+
+.evenement-point {
+	position: absolute;
+    z-index: 1;
+	width: 1em;
+	height: 1em;
+	border-radius: 1em;
+	border: 0.125em solid var(--color-periode-barre-contrast);
+	transform: translateX(-50%);
+	background-color: var(--color-periode-barre);
+}
+
+.evenement-point:hover {
+	z-index: 2;
+}
+
+.evenement-bulle {
+	display: none;
+	color: var(--color-base-font);
+	text-decoration: none;
+	margin: auto;
+	width: max-content;
+	background: var(--color-background);
+	padding: 0.5em;
+	border-radius: 1em;
+	border: 0.125em solid var(--color-base-font);
+	transform: translateX(-50%) translateX(0.5em) translateY(1.075em);
+	font-weight: bold;
+	transition: 2s;
+}
+
+.evenement-bulle::after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: -1.1em;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 0;
+	height: 0;
+	border: 0.5em solid transparent;
+	border-bottom-color: var(--color-base-font);
+}
+
+.evenement-bulle.ouverte {
+	display: block;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*					Blocs d'information						*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.info-modal {
+	background-color: var(--color-background);
+	color: var(--color-base-font);
+	width: 80%;
+	max-width: 800px;
+	max-height: 400px;
+	padding: 0;
+    border-radius: 1.25em;
+	border: none;
+	font-size: 1.125em;
+	overflow: auto;
+	z-index: 5;
+    box-shadow: 0 0 0.5rem 500vw rgba(0, 0, 0, 0.6);
+}
+
+/* EFFET DE FLOU À REVOIR */
+/* .info-modal::backdrop { */
+	/* background-color: rgba(0,0,0,0.6); */
+	/* backdrop-filter: blur(0.25rem); */
+/* } */
+
+.info-flex {
+	display: flex;
+	margin-bottom: 1em;
+}
+
+.info-photo-bloc {
+	width: 35%;
+	float: left;
+	padding: 1.25em 1.25em 0 1.25em;
+	font-size: 0.75em;
+}
+
+.info-photo-bloc a {
+	color: var(--color-base-font);
+}
+
+.info-photo {
+	width: 100%;
+	max-height: 90%;
+	object-fit: cover;
+	margin: auto;
+	border-radius: 0.625em;
+}
+
+.info-contenu {
+	width: 100%;
+	height: fit-content;
+	text-align: justify;
+	padding-right: 1em;
+	margin-bottom: -1em;
+}
+
+.info-fermer {
+    float: right;
+    margin: 1em 0 .2em 1em;
+}
+
+.info-fermer img {
+	width: 1.25em;
+	height: 1.25em;
+}
+
+.info-liens {
+	padding: 0 1.25em 1.25em 1.25em;
+}
+
+.info-lien {
+	background: var(--color-info-lien-background);
+	border: 0.0625em solid var(--color-info-lien-border);
+	color: var(--color-info-lien-font);
+	border-radius: 0.375em;
+	display: inline-block;
+	margin: 0.375em 0.375em 0 0;
+	padding: 0.0625em 0.625em;
+	transition: background .2s, border .2s;
+	text-decoration: none;
+}
+
+#informations .info-contenu {
+	padding-left: 1em
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*						Barre d'outils						*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+#barre-outils {
+	position: fixed;
+	left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+	margin: auto;
+	border-radius: 0 1.25em 1.25em 0;
+	border: 0.125em solid var(--color-barre-outils-border);
+	border-left: none;
+	background: var(--color-barre-outils-background);
+	padding: 0.1em;
+}
+
+.outil {
+	display: block;
+}
+
+.outil img {
+	width: 3em;
+	height: 3em;
+	vertical-align: middle;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */

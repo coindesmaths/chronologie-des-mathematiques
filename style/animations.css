@@ -1,0 +1,47 @@
+
+.info-lien:hover {
+	background: var(--color-info-lien-background-hover);
+	border-color: var(--color-info-lien-border-hover);
+}
+
+.outil img, .info-fermer img, .info-photo {
+	transition: 0.2s;
+}
+
+.outil img:hover, .info-fermer img:hover {
+	transform: scale(1.2);
+}
+
+.info-photo:hover {
+	transform: scale(1.1);
+}
+
+.info-modal {
+    animation: 
+		scale-out var(--duree-animation), 
+		fade-out var(--duree-animation), 
+		hide var(--duree-animation);
+}
+
+.info-modal[open] {
+    animation: 
+		scale-in var(--duree-popup) var(--popup), 
+		fade-in var(--duree-popup) var(--popup);
+}
+
+.periode-lien:hover {
+	animation: pulse var(--duree-pulse);
+}
+
+.evenement-bulle.ouverte {
+    animation: 
+		fade-in var(--duree-popup) var(--popup),
+		bulle-in var(--duree-popup) var(--popup);
+}
+
+.evenement-bulle {
+    animation: 
+		fade-out var(--duree-animation), 
+		hide var(--duree-animation),
+		bulle-out var(--duree-popup);
+}
