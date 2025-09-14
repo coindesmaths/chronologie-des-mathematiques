@@ -328,32 +328,10 @@ function construireInfoBloc(donnees)
 	return infoBloc;
 }
 
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
-//	<div class="info-liens">
-//		<hr style="margin-top: 15px;">
-//		<a class="info-lien" href="https://coindesmaths.fr/somme-des-entiers-dsm1/">Somme des entiers</a>
-//	</div>
+var zoom = 1;
 
-function creer_info_liens (donnees) {
-	
-	// Créer "info-liens"
-	info_liens = document.createElement('div');
-	info_liens.classList.add('info-liens');
-	
-	// Ajouter règle horizontale
-	info_liens.insertAdjacentHTML('beforeend', '<hr style="margin-top: 15px;">');
-	
-	// Ajouter liens
-	liens = donnees['Articles URLs'].split(',');
-	sujets = donnees['Articles Sujets'].split(',');
-	for (let i = 0; i < liens.length; i++) {
-		lien = document.createElement('a');
-		lien.classList.add('info-lien');
-		lien.href = liens[i];
-		lien.innerHTML = sujets[i];
-		lien.target = '_blank';
-		info_liens.appendChild(lien);
 	}
 	
 	return info_liens;
