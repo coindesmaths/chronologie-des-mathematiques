@@ -328,7 +328,6 @@ function construireInfoLiens (donnees) {
 	// Ajout des liens
 	let liens = donnees['Articles URLs'].split(',');
 	let sujets = donnees['Articles Sujets'].split(',');
-	console.log(donnees['Headline'], liens, sujets);
 	for (let i = 0; i < liens.length; i++) {
 		let lien = document.createElement('a');
 		lien.classList.add('info-lien');
@@ -401,14 +400,14 @@ function calculerPositions() {
 	
 	// Position des règles
 	let regles = document.getElementsByClassName('regle-date');
-	for (regle of regles) {
+	for (let regle of regles) {
 		let posX = anneeVersPositionX(regle.date);
 		regle.style.left = `${posX}em`;
 	}
 	
-	// Position et longueur des barres
-	barres = document.getElementsByClassName('periode-barre');
-	for (barre of barres) {
+	// Position et longueur des périodes
+	let barres = document.getElementsByClassName('periode-barre');
+	for (let barre of barres) {
 		let annee1 = barre.donnees['Year'];
 		let annee2 = barre.donnees['End Year'];
 		let posX = anneeVersPositionX(annee1);
