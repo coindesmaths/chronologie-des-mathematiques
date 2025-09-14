@@ -298,33 +298,34 @@ function construireInfoFlex (donnees)
 	
 	return infoFlex;
 }
+
+// Construit un "info-bloc" pour la frise chronologique
+function construireInfoBloc(donnees)
+{	
+	// Création d'un "info-bloc"
+	let infoBloc = document.createElement('div');
+	infoBloc.classList.add('info-bloc');
+	infoBloc.setAttribute("id", donnees['Headline']);
 	
-	// Créer "info-content"
-	info_content = document.createElement('div');
-	info_content.classList.add('info-content');
+	// Création d'un "info-modal"
+	let infoModal = document.createElement('div');
+	infoModal.classList.add('info-modal');
 	
-	// Créer "info-fermer"
-	info_fermer = document.createElement('a');
-	info_fermer.classList.add("info-fermer");
-	info_fermer.href = 'javascript:void(0);';
-	info_fermer.addEventListener('click', function () {
-		info_fermer_onclick(donnees['Headline']);
-	});
+	// Création d'un "info-flex"
+	let infoFlex = construireInfoFlex(donnees);
 	
-	// Ajouter image à "info-fermer"
-	img = document.createElement('img')
-	img.src = 'https://www.svgrepo.com/download/80301/cross.svg'
-	info_fermer.appendChild(img);
+	// Ajout d'éléments
+	infoModal.appendChild(infoFlex);
+	infoBloc.appendChild(infoModal);
 	
-	// Append childs
-	info_photo_box.appendChild(info_photo);
-	info_photo_box.innerHTML += donnees['Media Caption'];
-	info_flex.appendChild(info_photo_box);
-	info_content.appendChild(info_fermer);
-	info_content.insertAdjacentHTML('beforeend', donnees['Text']);
-	info_flex.appendChild(info_content);
+	// Ajout d'un "info-liens"
+	if (donnees['Articles URLs'])
+	{
+		let infoLiens = construireInfoLiens(donnees);
+		infoModal.appendChild(infoLiens);
+	}
 	
-	return info_flex;
+	return infoBloc;
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
