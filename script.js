@@ -294,4 +294,17 @@ for (const mathematicien of data) {
 	info_bios = document.getElementById('timeline-bios');
 	info_bio = creer_info_bio(mathematicien);
 	info_bios.appendChild(info_bio);
-}
+}// Ajout listeners aux outils
+let outilZoom = document.getElementById('outil-zoom');
+outilZoom.addEventListener('click', zoomer);
+let outilDezoom = document.getElementById('outil-dezoom');
+outilDezoom.addEventListener('click', dezoomer);
+let outilInfo = document.getElementById('outil-info');
+outilInfo.addEventListener('click', () => afficherInfoBloc('informations'));
+let informations = document.getElementById('informations');
+informationsFermer = informations.getElementsByClassName('info-fermer')[0];
+informationsFermer.addEventListener('click', () => fermerInfoBloc('informations'));
+
+// Commencer tout à droite
+let frise = document.getElementById('frise');
+frise.scrollLeft = frise.scrollWidth;
