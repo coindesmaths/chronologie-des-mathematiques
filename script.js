@@ -366,14 +366,14 @@ function verifierAffichageDates()
 function afficherInfoBloc(id)
 {
 	let infoBloc = document.getElementById(id);
-	infoBloc.style.visibility = 'visible';
+	infoBloc.showModal();
 }
 
 // Fermer un bloc info
 function fermerInfoBloc (id)
 {
 	let infoBloc = document.getElementById(id);
-	infoBloc.style.visibility = 'hidden';
+	infoBloc.close();
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
