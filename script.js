@@ -327,59 +327,15 @@ function construireInfoBloc(donnees)
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
-var zoom = 1;
+let zoom = 1;
 
-function zoomer()
-{
-	if (zoom < 2)
-	{
-		zoom *= 2;
-		calculerPositions(zoom);
-		frise.scrollLeft *= 2;
-		verifierAffichageDates();
-	}
+function appliquerFacteurScroll (a) {
+	let posXL = frise.scrollLeft;
+	let posXC = posXL + window.innerWidth / 2;
+	let newPosXC = a * posXC;
+	let newPosXL = newPosXC - window.innerWidth / 2;
+	frise.scrollTo(newPosXL, 0);
 }
-
-function dezoomer()
-{
-	if (0.25 < zoom)
-	{
-		zoom /= 2;
-		frise.scrollLeft /= 2;
-		calculerPositions();
-		verifierAffichageDates();
-	}
-}
-
-// Vérifie l'affichage des dates en fonction du zoom
-function verifierAffichageDates()
-{
-	let dates = document.getElementsByClassName('periode-date');
-	for (date of dates)
-	{
-		date.style.display = zoom < 1 ? 'none' : 'inline';
-	}
-}
-
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
-
-// Affiche un bloc info
-function afficherInfoBloc(id)
-{
-	let infoBloc = document.getElementById(id);
-	infoBloc.showModal();
-	setHash(`#${id}`);
-}
-
-// Fermer un bloc info
-function fermerInfoBloc (id)
-{
-	let infoBloc = document.getElementById(id);
-	infoBloc.close();
-	setHash('');
-}
-
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
 // Calcule les positions des règles et des barres
 function calculerPositions()
@@ -403,6 +359,60 @@ function calculerPositions()
 		barre.style.left = `${posX}em`;
 		barre.style.width = longueur;
 	}
+}
+
+// Vérifie l'affichage des dates en fonction du zoom
+function verifierAffichageDates()
+{
+	let dates = document.getElementsByClassName('periode-date');
+	for (date of dates)
+	{
+		date.style.display = zoom < 1 ? 'none' : 'inline';
+	}
+}
+
+function zoomer()
+{
+	if (zoom < 2)
+	{
+		zoom *= 2;
+		calculerPositions(zoom);
+		appliquerFacteurScroll(2, 0);
+		verifierAffichageDates();
+	}
+}
+
+function dezoomer()
+{
+	if (0.25 < zoom)
+	{
+		zoom /= 2;
+		appliquerFacteurScroll(0.5, 0);
+		calculerPositions();
+		verifierAffichageDates();
+	}
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+
+// Affiche un bloc info
+function afficherInfoBloc(id)
+{
+	let infoBloc = document.getElementById(id);
+	infoBloc.showModal();
+	setHash(`#${id}`);
+}
+
+// Fermer un bloc info
+function fermerInfoBloc (id)
+{
+	let infoBloc = document.getElementById(id);
+	infoBloc.close();
+	setHash('');
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+
 function setHash (hash) { 
     var scrollV, scrollH, loc = window.location;
     if ("pushState" in history)
