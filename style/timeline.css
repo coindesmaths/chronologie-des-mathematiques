@@ -196,6 +196,10 @@ h1 {
     box-shadow: 0 0 0.5rem 500vw rgba(0, 0, 0, 0.6);
 }
 
+.info-modal a {
+	color: var(--color-base-font);
+}
+
 /* EFFET DE FLOU À REVOIR */
 /* .info-modal::backdrop { */
 	/* background-color: rgba(0,0,0,0.6); */
@@ -212,10 +216,6 @@ h1 {
 	float: left;
 	padding: 1.25em 1.25em 0 1.25em;
 	font-size: 0.75em;
-}
-
-.info-photo-bloc a {
-	color: var(--color-base-font);
 }
 
 .info-photo {
