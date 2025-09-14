@@ -142,6 +142,55 @@ h1 {
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+.evenement-point {
+	position: absolute;
+    z-index: 1;
+	width: 1em;
+	height: 1em;
+	border-radius: 1em;
+	border: 0.0625em solid black;
+	transform: translateX(-50%);
+	background-color: orange;
+}
+
+.evenement-point:hover {
+	z-index: 2;
+}
+
+.evenement-bulle {
+	display: none;
+	color: black;
+	text-decoration: none;
+	margin: auto;
+	width: max-content;
+	background: white;
+	padding: 0.5em;
+	border-radius: 1em;
+	border: 0.125em solid black;
+	transform: translateX(-50%) translateX(0.5em) translateY(1.075em);
+	font-weight: bold;
+	transition: 2s;
+}
+
+.evenement-bulle::after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: -1.1em;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 0;
+	height: 0;
+	border: 0.5em solid transparent;
+	border-bottom-color: black;
+}
+
+.evenement-bulle.ouverte {
+	display: block;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 .info-modal {
 	width: 80%;
 	max-width: 800px;	/* À REVOIR */
