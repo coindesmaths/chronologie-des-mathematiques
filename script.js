@@ -256,24 +256,29 @@ function construireInfoContenu(donnees)
 	return infoContenu;
 }
 
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
-
-//	<div class="info-flex">
-//		<div class="info-photo-box">
-//			<img class="info-photo" src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Carl_Friedrich_Gauss.jpg" />
-//			Source : <a href="https://fr.wikipedia.org/wiki/Carl_Friedrich_Gauss" title="Carl Friedrich Gauss">Carl Friedrich Gauss</a> (<a href="https://commons.wikimedia.org/wiki/File:Carl_Friedrich_Gauss.jpg" title="Carl Friedrich Gauss sur Wikimedia">Wikimedia</a>)
-//		</div>
-//		<div class="info-content">
-//			<p>Carl Friedrich Gauss (1777-1855) est un mathématicien reconnu.</p>
-//		</div>
-//	</div>
-
-function info_fermer_onclick (id) {
-	info_bio = document.getElementById(id);
-	// console.log('Fermeture :', info_bio);
-	info_bio.style.visibility = 'hidden';
-	info_bio.style.opacity = '0';
-	info_bio.style.transition = 'visibility 0.2s, opacity 0.2s linear';
+// Construis des liens pour un "info-flex"
+function construireInfoLiens (donnees)
+{	
+	// Création d'un "info-liens"
+	let infoLiens = document.createElement('div');
+	infoLiens.classList.add('info-liens');
+	
+	// Ajout d'une règle horizontale
+	infoLiens.insertAdjacentHTML('beforeend', '<hr style="margin-top: 15px;">');
+	
+	// Ajout des liens
+	let liens = donnees['Articles URLs'].split(',');
+	let sujets = donnees['Articles Sujets'].split(',');
+	for (let i = 0; i < liens.length; i++) {
+		let lien = document.createElement('a');
+		lien.classList.add('info-lien');
+		lien.href = liens[i];
+		lien.innerHTML = sujets[i];
+		lien.target = '_blank';
+		infoLiens.appendChild(lien);
+	}
+	
+	return infoLiens;
 }
 
 function creer_info_flex (donnees) {
