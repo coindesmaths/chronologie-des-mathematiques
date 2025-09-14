@@ -14,13 +14,7 @@
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-html {
-	margin: 0;
-	padding: 0;
-	height: 100%
-}
-
-body {
+html, body {
 	margin: 0;
 	padding: 0;
 	height: 100%
@@ -54,13 +48,11 @@ h1 {
 	text-align: center;
 	margin-top: 0.9em;
 	position: fixed;
-	width: 100%;
+    width: max-content;
+    left: 50%;
+    transform: translateX(-50%);
 	z-index: 1;
-	text-shadow:
-		3px 3px 0 white,
-		-3px 3px 0 white,
-		-3px -3px 0 white,
-		3px -3px 0 white;
+	background: white;
 }
 
 #frise-evenements {
@@ -75,7 +67,6 @@ h1 {
 	color: #aaa;
 	position: absolute;
 	font-weight: bold;
-	padding-left: 0.3125em;
 }
 
 .regle-date.clair {
@@ -86,11 +77,8 @@ h1 {
 .date-span {
 	position: sticky;
 	top: 0;
-	text-shadow:
-		3px 3px 0 white,
-		-3px 3px 0 white,
-		-3px -3px 0 white,
-		3px -3px 0 white;
+	padding: 0 0.3125em 0 0.3125em;
+	background: white;
 	z-index: 1;
 }
 
@@ -132,6 +120,10 @@ h1 {
 	background-color: orange;
 }
 
+.periode-barre.en-vie {
+	border-radius: 0.625em 0 0 0.625em;
+}
+
 .periode-lien {
 	position: relative;
 	top: -0.7em;
@@ -144,6 +136,7 @@ h1 {
 }
 
 .periode-date {
+	display: none;
 	color: #777;
 }
 
@@ -159,7 +152,7 @@ h1 {
 	font-size: 1.125em;
 	overflow: auto;
 	z-index: 5;
-    box-shadow: 0 0 0.5rem 1000vw rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 0.5rem 200vw rgba(0, 0, 0, 0.6);
 }
 
 /* EFFET DE FLOU À REVOIR */
@@ -170,11 +163,12 @@ h1 {
 
 .info-flex {
 	display: flex;
+	margin-bottom: 1em;
 }
 
 .info-photo-bloc {
 	width: 35%;
-	max-height: 300px;
+	/* max-height: 19em; */
 	float: left;
 	padding: 1.25em 1.25em 0 1.25em;
 	font-size: 0.75em;
@@ -202,7 +196,7 @@ h1 {
 
 .info-fermer {
     float: right;
-    margin: 1em 0 .2em 1em;;
+    margin: 1em 0 .2em 1em;
 }
 
 .info-fermer img {
