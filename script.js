@@ -1,6 +1,9 @@
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
+const DATA_PERIODES = DATA['periodes'];
+const DATA_EVENEMENTS = DATA['evenements'];
+
 const IMG_COINDESMATHS = 'assets/coindesmaths.png';
 const IMG_CROIX = 'assets/croix.svg';
 const IMG_ZOOM_PLUS = 'assets/zoom-plus.svg';
@@ -222,6 +225,48 @@ function construirePeriodeBarre(donnees) {
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
+function construireEvenementBulle(evenement) {
+	
+	let bulle = document.createElement('a');
+	let titre = evenement['Headline'];
+	bulle.classList.add('evenement-bulle');
+	bulle.textContent = titre;
+	
+	bulle.href = 'javascript:void(0);';
+	bulle.title = `Ouvrir la description de ${titre}`;
+	bulle.addEventListener('click', () => afficherInfoBloc(titre));
+	
+	return bulle;
+}
+
+function construireEvenementPoint(evenement) {
+	
+	// Création d'un ... (disque)
+	let point = document.createElement('div');
+	let annee = evenement['Year'];
+	let titre = evenement['Headline'];
+	let posX = anneeVersPositionX(annee);
+	point.classList.add('evenement-point');
+	point.setAttribute("id", `point:${titre}`);
+	point.style.left = `${posX}em`;
+	
+	// Création d'un "evenement-bulle" (bulle)
+	let bulle = construireEvenementBulle(evenement);
+	point.appendChild(bulle)
+	
+	// Listeners
+	point.addEventListener('mouseenter', 
+		(event) => afficherEvenementBulle(titre)
+	);
+	point.addEventListener('mouseleave', 
+		(event) => fermerEvenementBulle(titre)
+	);
+	
+	return point;
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+
 // Construis un "info-photo-bloc" pour un "info-flex"
 function construireInfoPhotoBloc(donnees) {
 	
@@ -411,6 +456,20 @@ function fermerInfoBloc(id) {
 	setHash('');
 }
 
+// Affiche une bulle d'évènement
+function afficherEvenementBulle (id) {
+	let evenement = document.getElementById(`point:${id}`);
+	let bulle = evenement.getElementsByClassName('evenement-bulle')[0];
+	bulle.classList.add('ouverte');
+}
+
+// Ferme une bulle d'évènement
+function fermerEvenementBulle (id) {
+	let evenement = document.getElementById(`point:${id}`);
+	let bulle = evenement.getElementsByClassName('evenement-bulle')[0];
+	bulle.classList.remove('ouverte');
+}
+
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
 function setHash (hash) { 
@@ -438,30 +497,35 @@ function setHash (hash) {
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
-// Organisation des données
-let donnees = organiserDonneesJSON(data);
-console.log(donnees);
+window.addEventListener("load", (event) => {
+	
+	let periodesNonTerminees = gestionPeriodesNonTerminees(DATA_PERIODES);
+	
+	// Organisation des données
+	let donnees = organiserDonneesJSON(DATA_PERIODES);
+	console.log(donnees);
 
-// Création de la graduation de la frise chronologique
-construireReglesDates();
+	// Création de la graduation de la frise chronologique
+	construireReglesDates();
 
-// Création de toutes les barres de mathématiciens
-let friseContenu = document.getElementById("frise-contenu");
-for (let i = 0; i < donnees.length; i++) {
-	let ligne = construireLigneFrise();
-	for (let mathematicien of donnees[i]) {
-		let barre = construirePeriodeBarre(mathematicien);
-		ligne.appendChild(barre);
+	// Création de toutes les barres de périodes
+	let frisePeriodes = document.getElementById('frise-periodes');
+	for (let i = 0; i < donnees.length; i++) {
+		let ligne = construireLigneFrise();
+		for (let periode of donnees[i]) {
+			let barre = construirePeriodeBarre(periode);
+			ligne.appendChild(barre);
+		}
+		frisePeriodes.appendChild(ligne);
 	}
-	friseContenu.appendChild(ligne);
-}
-
-// Création de toutes les "info-bloc"
-let friseBios = document.getElementById('frise-biographies');
-for (let mathematicien of data) {
-	let infoBloc = construireInfoBloc(mathematicien);
-	friseBios.appendChild(infoBloc);
-}
+	
+	// Création de tous les points d'évènements
+	let friseEvenements = document.getElementById('frise-evenements');
+	let friseLigneEvenements = friseEvenements.getElementsByClassName('frise-ligne');
+	for (let evenement of DATA_EVENEMENTS) {
+		let point = construireEvenementPoint(evenement);
+		friseLigneEvenements[0].appendChild(point);
+	}
 
 // Ajout listeners aux outils
 let outilZoom = document.getElementById('outil-zoom');
@@ -477,6 +541,16 @@ infoFermer.addEventListener('click', () => fermerInfoBloc('informations'));
 // Commencer tout à droite
 let frise = document.getElementById('frise');
 frise.scrollTo(frise.scrollWidth, 0);
+	// Création de toutes les "info-bloc"
+	let friseInfos = document.getElementById('frise-infos');
+	for (let periode of DATA_PERIODES) {
+		let infoBloc = construireInfoBloc(periode);
+		friseInfos.appendChild(infoBloc);
+	}
+	for (let evenement of DATA_EVENEMENTS) {
+		let infoBloc = construireInfoBloc(evenement);
+		friseInfos.appendChild(infoBloc);
+	}
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
