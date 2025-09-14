@@ -203,21 +203,22 @@ function construirePeriodeBarre(donnees) {
 	let barre = document.createElement('div');
 	let annee1 = donnees['Year'];
 	let annee2 = donnees['End Year'];
+	let titre = donnees['Headline'];
 	let posX = anneeVersPositionX(annee1);
 	let longueur = calculerLongueurBarre(annee1, annee2);
 	barre.classList.add("periode-barre");
 	barre.style.left = `${posX}em`;
 	barre.style.width = longueur;
 	barre.donnees = donnees;
-	barre.setAttribute("id", `barre:${donnees['Headline']}`);
+	barre.setAttribute("id", `barre:${titre}`);
 	if (periodesNonTerminees.includes(titre)) barre.classList.add('en-vie');
 	
 	// Construire "periode-lien" et "date"
 	let lien = construirePeriodeLien(donnees);
-	let date = construirePeriodeDate(donnees);
+	// let date = construirePeriodeDate(donnees);
 	
 	// Ajout d'éléments
-	lien.appendChild(date);
+	// lien.appendChild(date);
 	barre.appendChild(lien);
 	
 	return barre;
@@ -326,6 +327,7 @@ function construireInfoLiens (donnees) {
 	// Ajout des liens
 	let liens = donnees['Articles URLs'].split(',');
 	let sujets = donnees['Articles Sujets'].split(',');
+	console.log(donnees['Headline'], liens, sujets);
 	for (let i = 0; i < liens.length; i++) {
 		let lien = document.createElement('a');
 		lien.classList.add('info-lien');
@@ -361,6 +363,7 @@ function construireInfoBloc(donnees) {
 	
 	// Création d'un "info-modal"
 	let infoModal = document.createElement('dialog');
+	let titre = donnees['Headline'];
 	infoModal.method = 'dialog';
 	infoModal.classList.add('info-modal');
 	infoModal.setAttribute("id", donnees['Headline']);
