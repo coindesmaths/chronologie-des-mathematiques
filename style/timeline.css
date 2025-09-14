@@ -206,6 +206,12 @@ h1 {
 	/* backdrop-filter: blur(0.25rem); */
 /* } */
 
+.info-wrapper {
+	overflow: auto;
+	max-width: 80vw;
+	max-height: 80vh;
+}
+
 .info-flex {
 	display: flex;
 	margin-bottom: 1em;

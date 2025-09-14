@@ -369,16 +369,21 @@ function construireInfoBloc(donnees) {
 	infoModal.classList.add('info-modal');
 	infoModal.setAttribute("id", donnees['Headline']);
 	
+	// Création d'un "info-wrapper"
+	let infoWrapper = document.createElement('div');
+	infoWrapper.classList.add('info-wrapper');
+	
 	// Création d'un "info-flex"
 	let infoFlex = construireInfoFlex(donnees);
 	
 	// Ajout d'éléments
-	infoModal.appendChild(infoFlex);
+	infoModal.appendChild(infoWrapper);
+	infoWrapper.appendChild(infoFlex);
 	
 	// Ajout d'un "info-liens"
 	if (donnees['Articles URLs']) {
 		let infoLiens = construireInfoLiens(donnees);
-		infoModal.appendChild(infoLiens);
+		infoWrapper.appendChild(infoLiens);
 	}
 	
 	return infoModal;
