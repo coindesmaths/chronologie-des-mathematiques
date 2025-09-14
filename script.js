@@ -55,26 +55,24 @@ const DATES_LIGHT = [
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
 // Organise et retourne les données des barres pour les empiler facilement
-function organiserDonneesJSON(donneesJSON)
-{	
+function organiserDonneesJSON(donneesJSON) {
+	
 	// Initialisation des données
 	let donnees = [];
 	
 	// Boucle sur les périodes dans les données
-	for (let periode of donneesJSON)
-	{
+	for (let periode of donneesJSON) {
+		
 		// Recherche de la première ligne pouvant afficher sans superposer
 		let annee = periode['Year'];
 		let j = donnees.findIndex(d => annee > d.at(-1)['End Year']);
 		
 		// Distinction si la recherche a trouvé quelque chose
-		if (j < 0)
-		{
+		if (j < 0) {
 			// Si une ligne est disponible, ajout de la période
 			donnees.push([periode]);
 		}
-		else
-		{
+		else {
 			//Sinon, création d'une nouvelle ligne
 			donnees[j].push(periode);
 		}
@@ -85,15 +83,15 @@ function organiserDonneesJSON(donneesJSON)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
 // Calcule la position horizontale à partir de l'année
-function anneeVersPositionX(annee)
-{
+function anneeVersPositionX(annee) {
+	
 	let posX = (-1000 <= annee) ? 2 * annee + 2200 : (annee + 5000) / 20;
 	return 1.25 + zoom * 0.1 * (posX);
 }
 
 // Calcule la largeur de la barre à partir de ses années
-function calculerLongueurBarre(annee1, annee2)
-{
+function calculerLongueurBarre(annee1, annee2) {
+	
 	let posX1 = anneeVersPositionX(annee1);
 	let posX2 = anneeVersPositionX(annee2);
 	return `${posX2 - posX1}em`;
@@ -102,8 +100,8 @@ function calculerLongueurBarre(annee1, annee2)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
 // Crée une règle de date
-function construireRegleDate(date)
-{
+function construireRegleDate(date) {
+	
 	// Création d'une nouvelle règle
 	let regle = document.createElement('div');
 	let posX = anneeVersPositionX(date);
@@ -112,16 +110,16 @@ function construireRegleDate(date)
 	regle.date = date;
 	
 	// Distinction selon l'importance de la règle
-	if (DATES_BOLD.includes(date))
-	{
+	if (DATES_BOLD.includes(date)) {
+		
 		// Si la date est BOLD, ajouter la date dans un span
 		let dateSpan = document.createElement('span');
 		dateSpan.classList.add('date-span');
 		dateSpan.textContent = date;
 		regle.appendChild(dateSpan);
 	} 
-	else
-	{
+	else {
+		
 		// Sinon, c'est une règle claire
 		regle.classList.add('clair');
 	}
@@ -130,14 +128,14 @@ function construireRegleDate(date)
 }
 
 // Crée toutes les règles de dates
-function construireReglesDates()
-{
+function construireReglesDates() {
+	
 	// Récupération de la ligne de dates
 	let friseGraduation = document.getElementById('frise-graduation');
 	
 	// Création de toutes les dates
-	for (let i = 0; i < DATES_LIGHT.length; i++)
-	{
+	for (let i = 0; i < DATES_LIGHT.length; i++) {
+		
 		// Création d'une nouvelle règle
 		let date = DATES_LIGHT[i];
 		let regle = construireRegleDate(date);
@@ -150,8 +148,8 @@ function construireReglesDates()
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
 // Construis un "frise-ligne" pour la frise chronologique
-function construireLigneFrise()
-{
+function construireLigneFrise() {
+	
 	let ligne = document.createElement('div');
 	ligne.classList.add('frise-ligne');
 	return ligne;
@@ -160,8 +158,8 @@ function construireLigneFrise()
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
 // Construis un "periode-date" pour un "periode-lien"
-function construirePeriodeDate(donnees)
-{
+function construirePeriodeDate(donnees) {
+	
 	let date = document.createElement('span');
 	let annee1 = donnees['Year'];
 	let annee2 = donnees['End Year'];
@@ -171,8 +169,8 @@ function construirePeriodeDate(donnees)
 }
 
 // Construis un "periode-lien" pour un "periode-barre"
-function construirePeriodeLien(donnees)
-{
+function construirePeriodeLien(donnees) {
+	
 	let lien = document.createElement('a');
 	let titre = donnees['Headline'];
 	lien.classList.add("periode-lien");
@@ -184,8 +182,8 @@ function construirePeriodeLien(donnees)
 }
 
 // Construis un "periode-barre" pour la frise chronologique
-function construirePeriodeBarre(donnees)
-{
+function construirePeriodeBarre(donnees) {
+	
 	// Construire "periode-barre"
 	let barre = document.createElement('div');
 	let annee1 = donnees['Year'];
@@ -212,8 +210,8 @@ function construirePeriodeBarre(donnees)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
 // Construis un "info-photo-bloc" pour un "info-flex"
-function construireInfoPhotoBloc(donnees)
-{
+function construireInfoPhotoBloc(donnees) {
+	
 	// Création d'un "info-photo-bloc"
 	let infoPhotoBloc = document.createElement('div');
 	infoPhotoBloc.classList.add('info-photo-bloc');
@@ -231,8 +229,8 @@ function construireInfoPhotoBloc(donnees)
 }
 
 // Construis un "info-contenu" pour un "info-flex"
-function construireInfoContenu(donnees)
-{	
+function construireInfoContenu(donnees) {
+	
 	// Création d'un "info-contenu"
 	let infoContenu = document.createElement('div');
 	infoContenu.classList.add('info-contenu');
@@ -258,8 +256,8 @@ function construireInfoContenu(donnees)
 }
 
 // Construis des liens pour un "info-flex"
-function construireInfoLiens (donnees)
-{	
+function construireInfoLiens (donnees) {
+	
 	// Création d'un "info-liens"
 	let infoLiens = document.createElement('div');
 	infoLiens.classList.add('info-liens');
@@ -283,8 +281,8 @@ function construireInfoLiens (donnees)
 }
 
 // Construis un "info-flex" pour un "info-bloc"
-function construireInfoFlex (donnees)
-{	
+function construireInfoFlex (donnees) {
+	
 	// Création d'un "info-flex"
 	let infoFlex = document.createElement('div');
 	infoFlex.classList.add('info-flex');
@@ -301,8 +299,8 @@ function construireInfoFlex (donnees)
 }
 
 // Construit un "info-modal" pour la frise chronologique
-function construireInfoBloc(donnees)
-{
+function construireInfoBloc(donnees) {
+	
 	// Création d'un "info-modal"
 	let infoModal = document.createElement('dialog');
 	infoModal.method = 'dialog';
@@ -316,8 +314,7 @@ function construireInfoBloc(donnees)
 	infoModal.appendChild(infoFlex);
 	
 	// Ajout d'un "info-liens"
-	if (donnees['Articles URLs'])
-	{
+	if (donnees['Articles URLs']) {
 		let infoLiens = construireInfoLiens(donnees);
 		infoModal.appendChild(infoLiens);
 	}
@@ -329,7 +326,7 @@ function construireInfoBloc(donnees)
 
 let zoom = 1;
 
-function appliquerFacteurScroll (a) {
+function appliquerFacteurScroll(a) {
 	let posXL = frise.scrollLeft;
 	let posXC = posXL + window.innerWidth / 2;
 	let newPosXC = a * posXC;
@@ -338,20 +335,18 @@ function appliquerFacteurScroll (a) {
 }
 
 // Calcule les positions des règles et des barres
-function calculerPositions()
-{
+function calculerPositions() {
+	
 	// Position des règles
 	let regles = document.getElementsByClassName('regle-date');
-	for (regle of regles)
-	{
+	for (regle of regles) {
 		let posX = anneeVersPositionX(regle.date);
 		regle.style.left = `${posX}em`;
 	}
 	
 	// Position et longueur des barres
 	barres = document.getElementsByClassName('periode-barre');
-	for (barre of barres)
-	{
+	for (barre of barres) {
 		let annee1 = barre.donnees['Year'];
 		let annee2 = barre.donnees['End Year'];
 		let posX = anneeVersPositionX(annee1);
@@ -362,19 +357,15 @@ function calculerPositions()
 }
 
 // Vérifie l'affichage des dates en fonction du zoom
-function verifierAffichageDates()
-{
+function verifierAffichageDates() {
 	let dates = document.getElementsByClassName('periode-date');
-	for (date of dates)
-	{
+	for (date of dates) {
 		date.style.display = zoom < 1 ? 'none' : 'inline';
 	}
 }
 
-function zoomer()
-{
-	if (zoom < 2)
-	{
+function zoomer() {
+	if (zoom < 2) {
 		zoom *= 2;
 		calculerPositions(zoom);
 		appliquerFacteurScroll(2, 0);
@@ -382,10 +373,8 @@ function zoomer()
 	}
 }
 
-function dezoomer()
-{
-	if (0.25 < zoom)
-	{
+function dezoomer() {
+	if (0.25 < zoom) {
 		zoom /= 2;
 		appliquerFacteurScroll(0.5, 0);
 		calculerPositions();
@@ -396,16 +385,14 @@ function dezoomer()
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
 // Affiche un bloc info
-function afficherInfoBloc(id)
-{
+function afficherInfoBloc(id) {
 	let infoBloc = document.getElementById(id);
 	infoBloc.showModal();
 	setHash(`#${id}`);
 }
 
 // Fermer un bloc info
-function fermerInfoBloc (id)
-{
+function fermerInfoBloc(id) {
 	let infoBloc = document.getElementById(id);
 	infoBloc.close();
 	setHash('');
@@ -415,14 +402,15 @@ function fermerInfoBloc (id)
 
 function setHash (hash) { 
     var scrollV, scrollH, loc = window.location;
-    if ("pushState" in history)
+    if ("pushState" in history) {
 		if (hash) {
 			history.pushState(null, null, hash);
 		} else {
 			history.pushState("", document.title, window.location.pathname
                                                        + window.location.search);
 		}
-    else {
+    } else {
+		
         // Prevent scrolling by storing the page's current scroll offset
         scrollV = document.body.scrollTop;
         scrollH = document.body.scrollLeft;
