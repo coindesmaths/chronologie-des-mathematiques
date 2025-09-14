@@ -12,11 +12,11 @@
 		font-size: 1.2em;
 	}
 	
-	#timeline-content {
+	#frise-contenu {
 		padding-top: 3.2em;
 	}
 	
-	.info-boite {
+	.info-modal {
 		max-width: 80%;
 		max-height: 80%;
 		font-size: 42px;
@@ -28,15 +28,28 @@
 		align-items: center;
 	}
 	
-	.info-content p {
+	.info-contenu p {
 		padding: 0 1em 0 1em;
 	}
 	
-	.info-photo-box {
+	.info-photo-bloc {
 		width: 60%;
 		max-height: none;
 		padding: 0.5em 1.25em 1em 1.25em;
 		font-size: 0.9em;
+	}
+	
+	.info-fermer {
+		margin-right: 1em;
+	}
+	
+	#barre-outils {
+		transform: translateY(-30%);
+	}
+	
+	.outil img {
+		width: 1em;
+		height: 1em;
 	}
 
 }
