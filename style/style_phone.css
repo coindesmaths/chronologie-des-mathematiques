@@ -10,7 +10,7 @@
 	/* body.dark-theme {--color-background: green !important} */
 	
 	#barre-outils {
-		font-size: 1.25em !important;
+		font-size: calc((100vh - 10.5vw)/16) !important;
 	}
 	
 	.info-modal {
@@ -27,7 +27,7 @@
 	}
 	
 	.info-modal {
-		font-size: 1em !important;
+		font-size: calc((100vh - 10.5vw)/16) !important;
 	}
 
 	input[type='radio'] { 
@@ -52,8 +52,12 @@ h1 {
 }
 
 .info-modal {
-	max-width: 80%;
-	max-height: 80%;
+	max-width: 80vw;
+	max-height: 80vh;
+}
+
+.info-wrapper {
+	max-height: inherit;
 }
 
 .info-flex {
@@ -94,7 +98,6 @@ h1 {
 	-webkit-transform: translateY(-30%);
 	    -ms-transform: translateY(-30%);
 	        transform: translateY(-30%);
-	font-size: 5vw;
 }
 
 #informations .info-contenu {
