@@ -208,40 +208,52 @@ function construirePeriodeBarre(donnees)
 	return barre;
 }
 
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
-//	<div class="info-bio">
-//		<div class="info-boite">
-//			*INFO-FLEX*
-//			*INFO-LIENS*
-//		</div>
-//	</div>
+// Construis un "info-photo-bloc" pour un "info-flex"
+function construireInfoPhotoBloc(donnees)
+{
+	// Création d'un "info-photo-bloc"
+	let infoPhotoBloc = document.createElement('div');
+	infoPhotoBloc.classList.add('info-photo-bloc');
+	
+	// Création d'un "info-photo"
+	let infoPhoto = document.createElement('img');
+	infoPhoto.classList.add('info-photo');
+	infoPhoto.src = donnees['Media'];
+	
+	// Ajout d'éléments
+	infoPhotoBloc.appendChild(infoPhoto);
+	infoPhotoBloc.innerHTML += donnees['Media Caption'];
+	
+	return infoPhotoBloc;
+}
 
-function creer_info_bio (donnees) {
+// Construis un "info-contenu" pour un "info-flex"
+function construireInfoContenu(donnees)
+{	
+	// Création d'un "info-contenu"
+	let infoContenu = document.createElement('div');
+	infoContenu.classList.add('info-contenu');
 	
-	// Créer "info-bio"
-	info_bio = document.createElement('div');
-	info_bio.classList.add('info-bio');
-	info_bio.setAttribute("id", donnees['Headline']);
+	// Création d'un "info-fermer"
+	let infoFermer = document.createElement('a');
+	let titre = donnees['Headline'];
+	infoFermer.classList.add("info-fermer");
+	infoFermer.href = 'javascript:void(0);';
+	infoFermer.title = 'Fermer la biographie';
+	infoFermer.addEventListener('click', () => fermerInfoBloc(titre));
+
+	// Ajout d'une image à "info-fermer"
+	let infoFermerImg = document.createElement('img');
+	infoFermerImg.src = IMG_CROIX;
+	infoFermer.appendChild(infoFermerImg);
 	
-	// Créer "info-boite"
-	info_boite = document.createElement('div');
-	info_boite.classList.add('info-boite');
+	// Ajout d'éléments
+	infoContenu.appendChild(infoFermer);
+	infoContenu.insertAdjacentHTML('beforeend', donnees['Text']);
 	
-	// Créer "info-flex"
-	info_flex = creer_info_flex(donnees);
-	info_boite.appendChild(info_flex);
-	
-	// Créer "info-liens"
-	if (donnees['Articles URLs']) {
-		info_liens = creer_info_liens(donnees);
-		info_boite.appendChild(info_liens);
-	}
-	
-	// Append child
-	info_bio.appendChild(info_boite);
-	
-	return info_bio;
+	return infoContenu;
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
