@@ -157,48 +157,53 @@ function construireLigneFrise()
 	return ligne;
 }
 
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
-//	<div class="mathematicien-barre">
-//  	<a href="#" class="mathematicien-lien">
-//			Carl Friedrich Gauss
-//			<span class="date">(1777-1855)</span>
-//		</a>
-//	</div>
-
-function barre_onclick (id) {
-	info_bio = document.getElementById(id);
-	// console.log('Ouverture :', info_bio);
-	info_bio.style.visibility = 'visible';
-	info_bio.style.opacity = '1';
-	info_bio.style.transition = 'visibility 0s, opacity 0.2s linear';
+// Construis un "periode-date" pour un "periode-lien"
+function construirePeriodeDate(donnees)
+{
+	let date = document.createElement('span');
+	let annee1 = donnees['Year'];
+	let annee2 = donnees['End Year'];
+	date.classList.add("periode-date");
+	date.textContent = ` (${annee1}-${annee2})`;
+	return date;
 }
- 
-function creer_mathematicien_barre (json_donnees) {
-	
-	// Créer "mathematicien-barre"
-	barre = document.createElement('div');
-	barre.classList.add("mathematicien-barre");
-	barre.style.left = annee_vers_posx(json_donnees['Year']) + 'em'
-	barre.style.width = annees_vers_width(json_donnees['Year'], json_donnees['End Year'])
-	
-	// Créer "mathematicien-lien"
-	lien = document.createElement('a');
-	lien.classList.add("mathematicien-lien");
-	lien.textContent = json_donnees['Headline']
+
+// Construis un "periode-lien" pour un "periode-barre"
+function construirePeriodeLien(donnees)
+{
+	let lien = document.createElement('a');
+	let titre = donnees['Headline'];
+	lien.classList.add("periode-lien");
+	lien.textContent = titre;
 	lien.href = 'javascript:void(0);';
-	lien.onclick = function () {
-		barre_onclick(json_donnees['Headline'])
-	};
+	lien.title = `Ouvrir la biographie de ${titre}`;
+	lien.addEventListener('click', () => afficherInfoBloc(titre));
+	return lien;
+}
+
+// Construis un "periode-barre" pour la frise chronologique
+function construirePeriodeBarre(donnees)
+{
+	// Construire "periode-barre"
+	let barre = document.createElement('div');
+	let annee1 = donnees['Year'];
+	let annee2 = donnees['End Year'];
+	let posX = anneeVersPositionX(annee1);
+	let longueur = calculerLongueurBarre(annee1, annee2);
+	barre.classList.add("periode-barre");
+	barre.style.left = `${posX}em`;
+	barre.style.width = longueur;
+	barre.donnees = donnees;
 	
-	// Créer "date"
-	date = document.createElement('span');
-	date.classList.add("date");
-	date.textContent = ' (' + json_donnees['Year'] + '-' + json_donnees['End Year'] + ')';
+	// Construire "periode-lien" et "date"
+	let lien = construirePeriodeLien(donnees);
+	let date = construirePeriodeDate(donnees);
 	
-	// Append Childs
-	barre.appendChild(lien);
+	// Ajout d'éléments
 	lien.appendChild(date);
+	barre.appendChild(lien);
 	
 	return barre;
 }
