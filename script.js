@@ -84,33 +84,68 @@ function organiserDonneesJSON(donneesJSON)
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
-
-function creer_regles_dates () {
-	
-	// Trouver la ligne de dates
-	ligne_dates = document.getElementById('timeline-grid');
-	// console.log(ligne_dates);
-	
-	// Afficher toutes les dates
-	for (let i = 0; i < DATES_LIGHT.length; i++) {
-		date = DATES_LIGHT[i]
-		// console.log(date);
-		regle = document.createElement('div');
-		regle.classList.add('regle-date');
-		regle.style.left = annee_vers_posx(date) + 'em';
-		// console.log(date, annee_vers_posx(date) + 'em');
-		if (DATES_BOLD.includes(date)) {
-			date_span = document.createElement('span');
-			date_span.classList.add('date-span');
-			date_span.textContent = date;
-			regle.appendChild(date_span);
-		} else {
-			regle.classList.add('clair');
-		}
-		ligne_dates.appendChild(regle);
-	}
+// Calcule la position horizontale à partir de l'année
+function anneeVersPositionX(annee)
+{
+	let posX = (-1000 <= annee) ? 2 * annee + 2200 : (annee + 5000) / 20;
+	return 1.25 + zoom * 0.1 * (posX);
 }
 
+// Calcule la largeur de la barre à partir de ses années
+function calculerLongueurBarre(annee1, annee2)
+{
+	let posX1 = anneeVersPositionX(annee1);
+	let posX2 = anneeVersPositionX(annee2);
+	return `${posX2 - posX1}em`;
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+
+// Crée une règle de date
+function construireRegleDate(date)
+{
+	// Création d'une nouvelle règle
+	let regle = document.createElement('div');
+	let posX = anneeVersPositionX(date);
+	regle.classList.add('regle-date');
+	regle.style.left = `${posX}em`;
+	regle.date = date;
+	
+	// Distinction selon l'importance de la règle
+	if (DATES_BOLD.includes(date))
+	{
+		// Si la date est BOLD, ajouter la date dans un span
+		let dateSpan = document.createElement('span');
+		dateSpan.classList.add('date-span');
+		dateSpan.textContent = date;
+		regle.appendChild(dateSpan);
+	} 
+	else
+	{
+		// Sinon, c'est une règle claire
+		regle.classList.add('clair');
+	}
+	
+	return regle;
+}
+
+// Crée toutes les règles de dates
+function construireReglesDates()
+{
+	// Récupération de la ligne de dates
+	let friseGraduation = document.getElementById('frise-graduation');
+	
+	// Création de toutes les dates
+	for (let i = 0; i < DATES_LIGHT.length; i++)
+	{
+		// Création d'une nouvelle règle
+		let date = DATES_LIGHT[i];
+		let regle = construireRegleDate(date);
+		
+		// Ajout de la règle
+		friseGraduation.appendChild(regle);
+	}
+}
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
