@@ -279,6 +279,7 @@ function construireInfoPhotoBloc(donnees) {
 	let infoPhoto = document.createElement('img');
 	infoPhoto.classList.add('info-photo');
 	infoPhoto.src = donnees['Media'];
+	infoPhoto.loading = 'lazy';
 	
 	// Ajout d'éléments
 	infoPhotoBloc.appendChild(infoPhoto);
