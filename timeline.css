@@ -30,12 +30,12 @@ body {
 	box-sizing: border-box;
 }
 
-#timeline {
+#frise {
 	height: 100%;
 	overflow: auto;
 }
 
-#timeline-wrap {
+#frise-wrapper {
 	height: fit-content;
 	min-height: 100%;
 	position: relative;
@@ -62,8 +62,8 @@ h1 {
 		3px -3px 0 white;
 }
 
-#timeline-content {
-	padding: 5em 0 1.25em 0;
+#frise-contenu {
+	padding: 5em 0 0.5em 0;
 }
 
 .regle-date {
@@ -107,7 +107,7 @@ h1 {
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-.timeline-ligne {
+.frise-ligne {
 	height: 1.25em;
 }
 
@@ -121,7 +121,7 @@ h1 {
     z-index: -2;
 }
 
-.mathematicien-barre {
+.periode-barre {
 	padding: 0.125em;
 	height: 0.3125em;
 	text-align: center;
@@ -131,24 +131,24 @@ h1 {
 	background-color: orange;
 }
 
-.mathematicien-lien {
-	vertical-align: -webkit-baseline-middle;
+.periode-lien {
 	position: relative;
-	top: -1em;
+	top: -0.7em;
 	text-decoration: none;
 	font-weight: bold;
 	width: inherit;
 	display: inline-block;
 	color: #141412;
+	white-space: nowrap;
 }
 
-.date {
+.periode-date {
 	color: #777;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-.info-bio {
+.info-bloc {
 	background-color: rgba(0,0,0,0.6);
     width: 100%;
     height: 100%;
@@ -159,10 +159,9 @@ h1 {
     z-index: 1;
 	transition: visibility 0s, opacity 0.2s ease-out;
 	visibility: hidden;
-	opacity: 0;
 }
 
-.info-boite {
+.info-modal {
 	width: 80%;
 	max-width: 800px;	/* À REVOIR */
 	max-height: 400px;	/* À REVOIR */
@@ -180,7 +179,7 @@ h1 {
 	display: flex;
 }
 
-.info-photo-box {
+.info-photo-bloc {
 	width: 35%;
 	max-height: 300px;
 	float: left;
@@ -188,7 +187,7 @@ h1 {
 	font-size: 0.75em;
 }
 
-.info-photo-box a {
+.info-photo-bloc a {
 	color: #141412;
 }
 
@@ -200,15 +199,16 @@ h1 {
 	border-radius: 0.625em;
 }
 
-.info-content {
+.info-contenu {
 	width: 100%;
 	height: fit-content;
 	text-align: justify;
+	padding-right: 1em;
 }
 
 .info-fermer {
     float: right;
-    margin: 1em;
+    margin: 1em 0 .2em 1em;;
 }
 
 .info-fermer img {
@@ -235,6 +235,7 @@ h1 {
 .info-lien:hover {
 	background: #ccc;
 	border-color: #aaa;
+}
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
