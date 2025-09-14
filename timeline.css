@@ -300,14 +300,21 @@ h1 {
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-@keyframes fade-out {
+@keyframes hide {
     0% {
-        opacity: 1;
         display: block;
     }
     100% {
-        opacity: 0;
         display: none;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }
 
@@ -338,14 +345,32 @@ h1 {
     }
 }
 
-@keyframes pulse{
+@keyframes pulse {
 	50% {
-		transform:scale(.9)
+		transform: scale(.9)
+	}
+}
+
+@keyframes bulle-in {
+	0% {
+		transform: translateX(-50%) translateX(0.5em) scale(0.2);
+	}
+	100% {
+		transform: translateX(-50%) translateX(0.5em) translateY(1.075em) scale(1);
+	}
+}
+
+@keyframes bulle-out {
+	0% {
+		transform: translateX(-50%) translateX(0.5em) translateY(1.075em) scale(1);
+	}
+	100% {
+		transform: translateX(-50%) translateX(0.5em) scale(0.2);
 	}
 }
 
 :root {
-	--duree-animation: 0.2s;
+	--duree-animation: 0.3s;
 	--duree-popup: 0.4s;
 	--duree-pulse: 0.3s;
 	--popup: cubic-bezier(0.18, 0.89, 0.32, 1.28);
@@ -356,12 +381,23 @@ h1 {
 	border-color: #aaa;
 }
 
-.outil img {
+.outil img, .info-fermer img, .info-photo {
 	transition: 0.2s;
 }
 
-.outil img:hover {
+.outil img:hover, .info-fermer img:hover {
 	transform: scale(1.2);
+}
+
+.info-photo:hover {
+	transform: scale(1.1);
+}
+
+.info-modal {
+    animation: 
+		scale-out var(--duree-animation), 
+		fade-out var(--duree-animation), 
+		hide var(--duree-animation);
 }
 
 .info-modal[open] {
@@ -370,12 +406,19 @@ h1 {
 		fade-in var(--duree-popup) var(--popup);
 }
 
-.info-modal {
-    animation: 
-		scale-out var(--duree-animation), 
-		fade-out var(--duree-animation);
-}
-
 .periode-lien:hover {
 	animation: pulse var(--duree-pulse);
+}
+
+.evenement-bulle.ouverte {
+    animation: 
+		fade-in var(--duree-popup) var(--popup),
+		bulle-in var(--duree-popup) var(--popup);
+}
+
+.evenement-bulle {
+    animation: 
+		fade-out var(--duree-animation), 
+		hide var(--duree-animation),
+		bulle-out var(--duree-popup);
 }
