@@ -250,6 +250,7 @@ function construireEvenementPoint(evenement) {
 	point.classList.add('evenement-point');
 	point.setAttribute("id", `point:${titre}`);
 	point.style.left = `${posX}em`;
+	point.donnees = evenement;
 	
 	// Création d'un "evenement-bulle" (bulle)
 	let bulle = construireEvenementBulle(evenement);
@@ -414,6 +415,14 @@ function calculerPositions() {
 		let longueur = calculerLongueurBarre(annee1, annee2);
 		barre.style.left = `${posX}em`;
 		barre.style.width = longueur;
+	}
+	
+	// Position des évènements
+	let points = document.getElementsByClassName('evenement-point');
+	for (let point of points) {
+		let annee = point.donnees['Year'];
+		let posX = anneeVersPositionX(annee);
+		point.style.left = `${posX}em`;
 	}
 }
 
