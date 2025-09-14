@@ -4,7 +4,7 @@
 const DATA_PERIODES = DATA['periodes'];
 const DATA_EVENEMENTS = DATA['evenements'];
 
-const IMG_COINDESMATHS = 'assets/coindesmaths.png';
+const IMG_COINDESMATHS = 'assets/coindesmaths.webp';
 const IMG_CROIX = 'assets/croix.svg';
 const IMG_ZOOM_PLUS = 'assets/zoom-plus.svg';
 const IMG_ZOOM_MOINS = 'assets/zoom-moins.svg';
