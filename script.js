@@ -147,17 +147,13 @@ function construireReglesDates()
 	}
 }
 
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
-//	<div class="timeline-ligne">
-//	</div>
-
-function creer_timeline_ligne () {
-	
-	// Créer "timeline-ligne"
-	ligne = document.createElement('div');
-	ligne.classList.add('timeline-ligne');
-	
+// Construis un "frise-ligne" pour la frise chronologique
+function construireLigneFrise()
+{
+	let ligne = document.createElement('div');
+	ligne.classList.add('frise-ligne');
 	return ligne;
 }
 
