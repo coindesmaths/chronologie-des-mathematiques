@@ -235,4 +235,37 @@ h1 {
 .info-lien:hover {
 	background: #ccc;
 	border-color: #aaa;
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+#barre-outils {
+	position: fixed;
+	left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+	margin: auto;
+	border-radius: 0 20px 20px 0;
+	border: 2px solid #333;
+	border-left: none;
+	background: white;
+	padding: 0.1em;
+}
+
+.outil {
+	display: block;
+}
+
+.outil img {
+	width: 3em;
+	height: 3em;
+	vertical-align: middle;
+	transition: 0.5s;
+}
+
+.outil img:hover {
+	transform: scale(1.2);
+}
+
+#informations .info-contenu {
+	padding-left: 1em
 }
