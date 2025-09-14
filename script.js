@@ -196,6 +196,7 @@ function construirePeriodeBarre(donnees)
 	barre.style.left = `${posX}em`;
 	barre.style.width = longueur;
 	barre.donnees = donnees;
+	barre.setAttribute("id", `barre:${donnees['Headline']}`);
 	
 	// Construire "periode-lien" et "date"
 	let lien = construirePeriodeLien(donnees);
@@ -367,6 +368,7 @@ function afficherInfoBloc(id)
 {
 	let infoBloc = document.getElementById(id);
 	infoBloc.showModal();
+	setHash(`#${id}`);
 }
 
 // Fermer un bloc info
@@ -374,6 +376,7 @@ function fermerInfoBloc (id)
 {
 	let infoBloc = document.getElementById(id);
 	infoBloc.close();
+	setHash('');
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
@@ -400,6 +403,26 @@ function calculerPositions()
 		barre.style.left = `${posX}em`;
 		barre.style.width = longueur;
 	}
+function setHash (hash) { 
+    var scrollV, scrollH, loc = window.location;
+    if ("pushState" in history)
+		if (hash) {
+			history.pushState(null, null, hash);
+		} else {
+			history.pushState("", document.title, window.location.pathname
+                                                       + window.location.search);
+		}
+    else {
+        // Prevent scrolling by storing the page's current scroll offset
+        scrollV = document.body.scrollTop;
+        scrollH = document.body.scrollLeft;
+
+        loc.hash = hash;
+
+        // Restore the scroll offset, should be flicker free
+        document.body.scrollTop = scrollV;
+        document.body.scrollLeft = scrollH;
+    }
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
@@ -443,3 +466,9 @@ informationsFermer.addEventListener('click', () => fermerInfoBloc('informations'
 // Commencer tout à droite
 let frise = document.getElementById('frise');
 frise.scrollLeft = frise.scrollWidth;
+let hash = window.location.hash.slice(1);
+if (document.getElementById(hash)) {
+	afficherInfoBloc(hash);
+} else {
+	setHash('');
+}
