@@ -475,7 +475,10 @@ informationsFermer.addEventListener('click', () => fermerInfoBloc('informations'
 
 // Commencer tout à droite
 let frise = document.getElementById('frise');
-frise.scrollLeft = frise.scrollWidth;
+frise.scrollTo(frise.scrollWidth, 0);
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+
 let hash = window.location.hash.slice(1);
 if (document.getElementById(hash)) {
 	afficherInfoBloc(hash);
