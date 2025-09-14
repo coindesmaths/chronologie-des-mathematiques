@@ -530,20 +530,6 @@ window.addEventListener("load", (event) => {
 		friseLigneEvenements[0].appendChild(point);
 	}
 
-// Ajout listeners aux outils
-let outilZoom = document.getElementById('outil-zoom');
-outilZoom.addEventListener('click', zoomer);
-let outilDezoom = document.getElementById('outil-dezoom');
-outilDezoom.addEventListener('click', dezoomer);
-let outilInfo = document.getElementById('outil-info');
-outilInfo.addEventListener('click', () => afficherInfoBloc('informations'));
-let info = document.getElementById('informations');
-let infoFermer = info.getElementsByClassName('info-fermer')[0];
-infoFermer.addEventListener('click', () => fermerInfoBloc('informations'));
-
-// Commencer tout à droite
-let frise = document.getElementById('frise');
-frise.scrollTo(frise.scrollWidth, 0);
 	// Création de toutes les "info-bloc"
 	let friseInfos = document.getElementById('frise-infos');
 	for (let periode of DATA_PERIODES) {
@@ -555,11 +541,27 @@ frise.scrollTo(frise.scrollWidth, 0);
 		friseInfos.appendChild(infoBloc);
 	}
 
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+	// Ajout listeners aux outils
+	let outilZoom = document.getElementById('outil-zoom');
+	outilZoom.addEventListener('click', zoomer);
+	let outilDezoom = document.getElementById('outil-dezoom');
+	outilDezoom.addEventListener('click', dezoomer);
+	let outilInfo = document.getElementById('outil-info');
+	outilInfo.addEventListener('click', () => afficherInfoBloc('informations'));
+	let info = document.getElementById('informations');
+	let infoFermer = info.getElementsByClassName('info-fermer')[0];
+	infoFermer.addEventListener('click', () => fermerInfoBloc('informations'));
 
-let hash = window.location.hash.slice(1);
-if (document.getElementById(hash)) {
-	afficherInfoBloc(hash);
-} else {
-	setHash('');
-}
+	// Commencer tout à droite
+	let frise = document.getElementById('frise');
+	frise.scrollTo(frise.scrollWidth, 0);
+
+	// Gestion du hash
+	let hash = window.location.hash.slice(1);
+	if (document.getElementById(hash)) {
+		afficherInfoBloc(hash);
+	} else {
+		setHash('');
+	}
+
+});
