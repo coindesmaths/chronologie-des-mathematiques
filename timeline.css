@@ -252,13 +252,90 @@ h1 {
 	width: 3em;
 	height: 3em;
 	vertical-align: middle;
-	transition: 0.5s;
+}
+
+#informations .info-contenu {
+	padding-left: 1em
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+        display: block;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes scale-in {
+    0% {
+        transform: scale(0.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes scale-out {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.2);
+    }
+}
+
+@keyframes pulse{
+	50% {
+		transform:scale(.9)
+	}
+}
+
+:root {
+	--duree-animation: 0.2s;
+	--duree-popup: 0.4s;
+	--duree-pulse: 0.3s;
+	--popup: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+.info-lien:hover {
+	background: #ccc;
+	border-color: #aaa;
+}
+
+.outil img {
+	transition: 0.2s;
 }
 
 .outil img:hover {
 	transform: scale(1.2);
 }
 
-#informations .info-contenu {
-	padding-left: 1em
+.info-modal[open] {
+    animation: 
+		scale-in var(--duree-popup) var(--popup), 
+		fade-in var(--duree-popup) var(--popup);
+}
+
+.info-modal {
+    animation: 
+		scale-out var(--duree-animation), 
+		fade-out var(--duree-animation);
+}
+
+.periode-lien:hover {
+	animation: pulse var(--duree-pulse);
 }
