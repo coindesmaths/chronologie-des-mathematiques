@@ -31,6 +31,36 @@ const DATA = {
             "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Pythagore\" target=\"_blank\" title=\"Pythagore\">Pythagore</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Kapitolinischer_Pythagoras_adjusted.jpg\" target=\"_blank\" title=\"Pythagore sur Wikimedia\">Wikimedia</a>)"
         },
         {
+            "Year": -490,
+            "End Year": -425,
+            "Headline": "Z\u00e9non d'\u00c9l\u00e9e",
+            "Text": "<p><b>Z\u00e9non d'\u00c9l\u00e9e</b>, n\u00e9(e) en -490 et mort(e) en -425, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Zeno_of_Elea_Tibaldi_or_Carducci_Escorial.jpg/200px-Zeno_of_Elea_Tibaldi_or_Carducci_Escorial.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Z\u00e9non d'\u00c9l\u00e9e\" target=\"_blank\" title=\"Z\u00e9non d'\u00c9l\u00e9e\">Z\u00e9non d'\u00c9l\u00e9e</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Zeno_of_Elea_Tibaldi_or_Carducci_Escorial.jpg\" target=\"_blank\" title=\"Z\u00e9non d'\u00c9l\u00e9e sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": -460,
+            "End Year": -360,
+            "Headline": "D\u00e9mocrite",
+            "Text": "<p><b>D\u00e9mocrite</b>, n\u00e9(e) en -460 et mort(e) en -360, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Ca%27_Rezzonico_-_Democrito_%281705%29_-_Giuseppe_Torretti.jpg/200px-Ca%27_Rezzonico_-_Democrito_%281705%29_-_Giuseppe_Torretti.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/D\u00e9mocrite\" target=\"_blank\" title=\"D\u00e9mocrite\">D\u00e9mocrite</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Ca%27_Rezzonico_-_Democrito_%281705%29_-_Giuseppe_Torretti.jpg\" target=\"_blank\" title=\"D\u00e9mocrite sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": -427,
+            "End Year": -347,
+            "Headline": "Platon",
+            "Text": "<p><b>Platon</b>, n\u00e9(e) en -427 et mort(e) en -347, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Plato_Pio-Clemetino_Inv305.jpg/200px-Plato_Pio-Clemetino_Inv305.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Platon\" target=\"_blank\" title=\"Platon\">Platon</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Plato_Pio-Clemetino_Inv305.jpg\" target=\"_blank\" title=\"Platon sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
             "Year": -333,
             "End Year": -285,
             "Headline": "Euclide",
@@ -59,6 +89,16 @@ const DATA = {
             "Articles Sujets": null,
             "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Eratosthene.01.png/200px-Eratosthene.01.png",
             "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/\u00c9ratosth\u00e8ne\" target=\"_blank\" title=\"\u00c9ratosth\u00e8ne\">\u00c9ratosth\u00e8ne</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Eratosthene.01.png\" target=\"_blank\" title=\"\u00c9ratosth\u00e8ne sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 10,
+            "End Year": 75,
+            "Headline": "H\u00e9ron d'Alexandrie",
+            "Text": "<p><b>H\u00e9ron d'Alexandrie</b>, n\u00e9(e) en 10 et mort(e) en 75, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Hero_of_Alexandria.png/200px-Hero_of_Alexandria.png",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/H\u00e9ron d'Alexandrie\" target=\"_blank\" title=\"H\u00e9ron d'Alexandrie\">H\u00e9ron d'Alexandrie</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Hero_of_Alexandria.png\" target=\"_blank\" title=\"H\u00e9ron d'Alexandrie sur Wikimedia\">Wikimedia</a>)"
         },
         {
             "Year": 100,
@@ -871,6 +911,16 @@ const DATA = {
             "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Beno\u00eet Mandelbrot\" target=\"_blank\" title=\"Beno\u00eet Mandelbrot\">Beno\u00eet Mandelbrot</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Benoit_Mandelbrot_mg_1804-d.jpg\" target=\"_blank\" title=\"Beno\u00eet Mandelbrot sur Wikimedia\">Wikimedia</a>)"
         },
         {
+            "Year": 1926,
+            "End Year": null,
+            "Headline": "Serre",
+            "Text": "<p><b>Jean-Pierre Serre</b>, n\u00e9(e) en 1926, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/1/19/Jean-Pierre_Serre_%282009%29_cropped.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Jean-Pierre Serre\" target=\"_blank\" title=\"Jean-Pierre Serre\">Jean-Pierre Serre</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Jean-Pierre_Serre_%282009%29_cropped.jpg\" target=\"_blank\" title=\"Jean-Pierre Serre sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
             "Year": 1928,
             "End Year": 2015,
             "Headline": "Nash",
@@ -879,6 +929,16 @@ const DATA = {
             "Articles Sujets": null,
             "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/John_Forbes_Nash%2C_Jr._by_Peter_Badge.jpg/200px-John_Forbes_Nash%2C_Jr._by_Peter_Badge.jpg",
             "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/John Forbes Nash\" target=\"_blank\" title=\"John Forbes Nash\">John Forbes Nash</a> (<a href=\"https://commons.wikimedia.org/wiki/File:John_Forbes_Nash%2C_Jr._by_Peter_Badge.jpg\" target=\"_blank\" title=\"John Forbes Nash sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1931,
+            "End Year": null,
+            "Headline": "Penrose",
+            "Text": "<p><b>Roger Penrose</b>, n\u00e9(e) en 1931, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Roger_Penrose-6Nov2005.jpg/200px-Roger_Penrose-6Nov2005.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Roger Penrose\" target=\"_blank\" title=\"Roger Penrose\">Roger Penrose</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Roger_Penrose-6Nov2005.jpg\" target=\"_blank\" title=\"Roger Penrose sur Wikimedia\">Wikimedia</a>)"
         },
         {
             "Year": 1937,
@@ -901,6 +961,16 @@ const DATA = {
             "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/\u00c9tienne Ghys\" target=\"_blank\" title=\"\u00c9tienne Ghys\">\u00c9tienne Ghys</a> (<a href=\"https://commons.wikimedia.org/wiki/File:%C3%89tienne_Ghys.jpeg\" target=\"_blank\" title=\"\u00c9tienne Ghys sur Wikimedia\">Wikimedia</a>)"
         },
         {
+            "Year": 1966,
+            "End Year": null,
+            "Headline": "Perelman",
+            "Text": "<p><b>Grigori Perelman</b>, n\u00e9(e) en 1966, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Perelman%2C_Grigori_%281966%29.jpg/200px-Perelman%2C_Grigori_%281966%29.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Grigori Perelman\" target=\"_blank\" title=\"Grigori Perelman\">Grigori Perelman</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Perelman%2C_Grigori_%281966%29.jpg\" target=\"_blank\" title=\"Grigori Perelman sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
             "Year": 1973,
             "End Year": null,
             "Headline": "Villani",
@@ -909,6 +979,16 @@ const DATA = {
             "Articles Sujets": null,
             "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Cedric_Villani_at_his_office_2015_n3.jpg/200px-Cedric_Villani_at_his_office_2015_n3.jpg",
             "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/C\u00e9dric Villani\" target=\"_blank\" title=\"C\u00e9dric Villani\">C\u00e9dric Villani</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Cedric_Villani_at_his_office_2015_n3.jpg\" target=\"_blank\" title=\"C\u00e9dric Villani sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1975,
+            "End Year": null,
+            "Headline": "Tao",
+            "Text": "<p><b>Terence Tao</b>, n\u00e9(e) en 1975, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Terence_Tao%2C_PCAST_Member_%28cropped%29.jpg/200px-Terence_Tao%2C_PCAST_Member_%28cropped%29.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Terence Tao\" target=\"_blank\" title=\"Terence Tao\">Terence Tao</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Terence_Tao%2C_PCAST_Member_%28cropped%29.jpg\" target=\"_blank\" title=\"Terence Tao sur Wikimedia\">Wikimedia</a>)"
         },
         {
             "Year": 1977,
