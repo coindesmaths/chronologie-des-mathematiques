@@ -469,9 +469,9 @@ let outilDezoom = document.getElementById('outil-dezoom');
 outilDezoom.addEventListener('click', dezoomer);
 let outilInfo = document.getElementById('outil-info');
 outilInfo.addEventListener('click', () => afficherInfoBloc('informations'));
-let informations = document.getElementById('informations');
-informationsFermer = informations.getElementsByClassName('info-fermer')[0];
-informationsFermer.addEventListener('click', () => fermerInfoBloc('informations'));
+let info = document.getElementById('informations');
+let infoFermer = info.getElementsByClassName('info-fermer')[0];
+infoFermer.addEventListener('click', () => fermerInfoBloc('informations'));
 
 // Commencer tout à droite
 let frise = document.getElementById('frise');
