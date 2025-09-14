@@ -1,102 +1,980 @@
-data = [
-    {
-        "Year": -550,
-        "End Year": -490,
-        "Headline": "Pythagore",
-        "Text": "<p><b>Pythagore</b> (-550--490) est un math\u00e9maticien reconnu.</p>",
-        "Articles URLs": "https://coindesmaths.fr/theoreme-de-pythagore-dsm4/",
-        "Articles Sujets": "Th\u00e9or\u00e8me de Pythagore",
-        "Media": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Kapitolinischer_Pythagoras_adjusted.jpg",
-        "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Pythagore\" target=\"_blank\" title=\"Pythagore\">Pythagore</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Kapitolinischer_Pythagoras_adjusted.jpg\" target=\"_blank\" title=\"Pythagore sur Wikimedia\">Wikimedia</a>)"
-    },
-    {
-        "Year": -333,
-        "End Year": -285,
-        "Headline": "Euclide",
-        "Text": "<p><b>Euclide</b> (-333--285) est un math\u00e9maticien reconnu.</p>",
-        "Articles URLs": "https://coindesmaths.fr/somme-des-angles-dun-triangle-dsm3/,https://coindesmaths.fr/identites-remarquables-dsm9/",
-        "Articles Sujets": "Somme des angles d\u2019un triangle,Identit\u00e9s remarquables",
-        "Media": "https://upload.wikimedia.org/wikipedia/commons/3/30/Euklid-von-Alexandria_1.jpg",
-        "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Euclide\" target=\"_blank\" title=\"Euclide\">Euclide</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Euklid-von-Alexandria_1.jpg\" target=\"_blank\" title=\"Euclide sur Wikimedia\">Wikimedia</a>)"
-    },
-    {
-        "Year": -287,
-        "End Year": -212,
-        "Headline": "Archim\u00e8de",
-        "Text": "<p><b>Archim\u00e8de</b> (-287--212) est un math\u00e9maticien reconnu.</p>",
-        "Articles URLs": "https://coindesmaths.fr/encadrement-de-pi-dsm6/",
-        "Articles Sujets": "Encadrement de \u03c0",
-        "Media": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Retrato_de_un_erudito_%28%C2%BFArqu%C3%ADmedes%3F%29%2C_por_Domenico_Fetti.jpg",
-        "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Archim\u00e8de\" target=\"_blank\" title=\"Archim\u00e8de\">Archim\u00e8de</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Retrato_de_un_erudito_%28%C2%BFArqu%C3%ADmedes%3F%29%2C_por_Domenico_Fetti.jpg\" target=\"_blank\" title=\"Archim\u00e8de sur Wikimedia\">Wikimedia</a>)"
-    },
-    {
-        "Year": 750,
-        "End Year": 846,
-        "Headline": "Al-Khw\u0101rizm\u012b",
-        "Text": "<p><b>Mu\u1e25ammad ibn M\u016bs\u0101 Al-Khw\u0101rizm\u012b</b> (750-846) est un math\u00e9maticien reconnu.</p>",
-        "Articles URLs": "https://coindesmaths.fr/identites-remarquables-dsm9/",
-        "Articles Sujets": "Identit\u00e9s remarquables",
-        "Media": "https://upload.wikimedia.org/wikipedia/commons/3/31/1983_CPA_5426.jpg",
-        "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Al-Khw\u00e2rizm\u00ee\" target=\"_blank\" title=\"Al-Khw\u00e2rizm\u00ee\">Al-Khw\u00e2rizm\u00ee</a> (<a href=\"https://commons.wikimedia.org/wiki/File:1983_CPA_5426.jpg\" target=\"_blank\" title=\"Al-Khw\u00e2rizm\u00ee sur Wikimedia\">Wikimedia</a>)"
-    },
-    {
-        "Year": 1564,
-        "End Year": 1642,
-        "Headline": "Galil\u00e9e",
-        "Text": "<p><b>Galil\u00e9e</b> (1564-1642) est un math\u00e9maticien reconnu.</p>",
-        "Articles URLs": "https://coindesmaths.fr/somme-des-entiers-impairs-dsm7/",
-        "Articles Sujets": "Somme des entiers impairs",
-        "Media": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Justus_Sustermans_-_Portrait_of_Galileo_Galilei%2C_1636.jpg",
-        "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Galil\u00e9e (savant)\" target=\"_blank\" title=\"Galil\u00e9e (savant)\">Galil\u00e9e (savant)</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Justus_Sustermans_-_Portrait_of_Galileo_Galilei%2C_1636.jpg\" target=\"_blank\" title=\"Galil\u00e9e (savant) sur Wikimedia\">Wikimedia</a>)"
-    },
-    {
-        "Year": 1622,
-        "End Year": 1703,
-        "Headline": "Viviani",
-        "Text": "<p><b>Vincenzo  Viviani</b> (1622-1703) est un math\u00e9maticien reconnu.</p>",
-        "Articles URLs": "https://coindesmaths.fr/theoreme-de-viviani-dsm2/",
-        "Articles Sujets": "Th\u00e9or\u00e8me de Viviani",
-        "Media": "https://upload.wikimedia.org/wikipedia/commons/0/06/Vincenzo_Viviani.jpeg",
-        "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Vincenzo Viviani\" target=\"_blank\" title=\"Vincenzo Viviani\">Vincenzo Viviani</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Vincenzo_Viviani.jpeg\" target=\"_blank\" title=\"Vincenzo Viviani sur Wikimedia\">Wikimedia</a>)"
-    },
-    {
-        "Year": 1777,
-        "End Year": 1855,
-        "Headline": "Gauss",
-        "Text": "<p><b>Carl Friedrich Gauss</b> (1777-1855) est un math\u00e9maticien reconnu.</p>",
-        "Articles URLs": "https://coindesmaths.fr/somme-des-entiers-dsm1/",
-        "Articles Sujets": "Somme des entiers",
-        "Media": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Carl_Friedrich_Gauss.jpg",
-        "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Carl Friedrich Gauss\" target=\"_blank\" title=\"Carl Friedrich Gauss\">Carl Friedrich Gauss</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Carl_Friedrich_Gauss.jpg\" target=\"_blank\" title=\"Carl Friedrich Gauss sur Wikimedia\">Wikimedia</a>)"
-    },
-    {
-        "Year": 1789,
-        "End Year": 1857,
-        "Headline": "Cauchy",
-        "Text": "<p><b>Augustin Louis Cauchy</b> (1789-1857) est un math\u00e9maticien reconnu.</p>",
-        "Articles URLs": "https://coindesmaths.fr/inegalite-de-cauchy-schwarz-dsm10/",
-        "Articles Sujets": "In\u00e9galit\u00e9 de Cauchy-Schwarz",
-        "Media": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Augustin_Louis_Cauchy.jpg",
-        "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Augustin Louis Cauchy\" target=\"_blank\" title=\"Augustin Louis Cauchy\">Augustin Louis Cauchy</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Augustin_Louis_Cauchy.jpg\" target=\"_blank\" title=\"Augustin Louis Cauchy sur Wikimedia\">Wikimedia</a>)"
-    },
-    {
-        "Year": 1822,
-        "End Year": 1911,
-        "Headline": "Galton",
-        "Text": "<p><b>Francis Galton</b> (1822-1911) est un math\u00e9maticien reconnu.</p>",
-        "Articles URLs": "https://coindesmaths.fr/planche-de-galton/",
-        "Articles Sujets": "Planche de Galton",
-        "Media": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Sir_Francis_Galton%2C_1890s.jpg",
-        "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Francis Galton\" target=\"_blank\" title=\"Francis Galton\">Francis Galton</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Sir_Francis_Galton%2C_1890s.jpg\" target=\"_blank\" title=\"Francis Galton sur Wikimedia\">Wikimedia</a>)"
-    },
-    {
-        "Year": 1843,
-        "End Year": 1921,
-        "Headline": "Schwarz",
-        "Text": "<p><b>Hermann Amandus Schwarz</b> (1843-1921) est un math\u00e9maticien reconnu.</p>",
-        "Articles URLs": "https://coindesmaths.fr/inegalite-de-cauchy-schwarz-dsm10/",
-        "Articles Sujets": "In\u00e9galit\u00e9 de Cauchy-Schwarz",
-        "Media": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Karl_Hermann_Amandus_Schwarz.jpg",
-        "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Hermann Amandus Schwarz\" target=\"_blank\" title=\"Hermann Amandus Schwarz\">Hermann Amandus Schwarz</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Karl_Hermann_Amandus_Schwarz.jpg\" target=\"_blank\" title=\"Hermann Amandus Schwarz sur Wikimedia\">Wikimedia</a>)"
-    }
-]
+const DATA = {
+    "periodes": [
+        {
+            "Year": -650,
+            "End Year": -548,
+            "Headline": "Thal\u00e8s",
+            "Text": "<p><b>Thal\u00e8s</b>, n\u00e9(e) en -650 et mort(e) en -548, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Illustrerad_Verldshistoria_band_I_Ill_107.jpg/200px-Illustrerad_Verldshistoria_band_I_Ill_107.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Thal\u00e8s\" target=\"_blank\" title=\"Thal\u00e8s\">Thal\u00e8s</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Illustrerad_Verldshistoria_band_I_Ill_107.jpg\" target=\"_blank\" title=\"Thal\u00e8s sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": -600,
+            "End Year": -500,
+            "Headline": "Hippase",
+            "Text": "<p><b>Hippase</b>, n\u00e9(e) en -600 et mort(e) en -500, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Hippasus_Metapontinus_-_Illustrium_philosophorum_et_sapientum_effigies_ab_eorum_numistatibus_extractae.png/200px-Hippasus_Metapontinus_-_Illustrium_philosophorum_et_sapientum_effigies_ab_eorum_numistatibus_extractae.png",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Hippase de M\u00e9taponte\" target=\"_blank\" title=\"Hippase de M\u00e9taponte\">Hippase de M\u00e9taponte</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Hippasus_Metapontinus_-_Illustrium_philosophorum_et_sapientum_effigies_ab_eorum_numistatibus_extractae.png\" target=\"_blank\" title=\"Hippase de M\u00e9taponte sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": -550,
+            "End Year": -490,
+            "Headline": "Pythagore",
+            "Text": "<p><b>Pythagore</b>, n\u00e9(e) en -550 et mort(e) en -490, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": "https://coindesmaths.fr/theoreme-de-pythagore-dsm4/",
+            "Articles Sujets": "Th\u00e9or\u00e8me de Pythagore",
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Kapitolinischer_Pythagoras_adjusted.jpg/200px-Kapitolinischer_Pythagoras_adjusted.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Pythagore\" target=\"_blank\" title=\"Pythagore\">Pythagore</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Kapitolinischer_Pythagoras_adjusted.jpg\" target=\"_blank\" title=\"Pythagore sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": -333,
+            "End Year": -285,
+            "Headline": "Euclide",
+            "Text": "<p><b>Euclide</b>, n\u00e9(e) en -333 et mort(e) en -285, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": "https://coindesmaths.fr/somme-des-angles-dun-triangle-dsm3/,https://coindesmaths.fr/identites-remarquables-dsm9/",
+            "Articles Sujets": "Somme des angles d\u2019un triangle,Identit\u00e9s remarquables",
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Euklid-von-Alexandria_1.jpg/200px-Euklid-von-Alexandria_1.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Euclide\" target=\"_blank\" title=\"Euclide\">Euclide</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Euklid-von-Alexandria_1.jpg\" target=\"_blank\" title=\"Euclide sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": -287,
+            "End Year": -212,
+            "Headline": "Archim\u00e8de",
+            "Text": "<p><b>Archim\u00e8de</b>, n\u00e9(e) en -287 et mort(e) en -212, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": "https://coindesmaths.fr/encadrement-de-pi-dsm6/",
+            "Articles Sujets": "Encadrement de \u03c0",
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Retrato_de_un_erudito_%28%C2%BFArqu%C3%ADmedes%3F%29%2C_por_Domenico_Fetti.jpg/200px-Retrato_de_un_erudito_%28%C2%BFArqu%C3%ADmedes%3F%29%2C_por_Domenico_Fetti.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Archim\u00e8de\" target=\"_blank\" title=\"Archim\u00e8de\">Archim\u00e8de</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Retrato_de_un_erudito_%28%C2%BFArqu%C3%ADmedes%3F%29%2C_por_Domenico_Fetti.jpg\" target=\"_blank\" title=\"Archim\u00e8de sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": -276,
+            "End Year": -194,
+            "Headline": "\u00c9ratosth\u00e8ne",
+            "Text": "<p><b>\u00c9ratosth\u00e8ne</b>, n\u00e9(e) en -276 et mort(e) en -194, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Eratosthene.01.png/200px-Eratosthene.01.png",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/\u00c9ratosth\u00e8ne\" target=\"_blank\" title=\"\u00c9ratosth\u00e8ne\">\u00c9ratosth\u00e8ne</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Eratosthene.01.png\" target=\"_blank\" title=\"\u00c9ratosth\u00e8ne sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 100,
+            "End Year": 170,
+            "Headline": "Ptol\u00e9m\u00e9e",
+            "Text": "<p><b>Claude Ptol\u00e9m\u00e9e</b>, n\u00e9(e) en 100 et mort(e) en 170, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Ptolemy_16century.jpg/200px-Ptolemy_16century.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Claude Ptol\u00e9m\u00e9e\" target=\"_blank\" title=\"Claude Ptol\u00e9m\u00e9e\">Claude Ptol\u00e9m\u00e9e</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Ptolemy_16century.jpg\" target=\"_blank\" title=\"Claude Ptol\u00e9m\u00e9e sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 201,
+            "End Year": 300,
+            "Headline": "Diophante",
+            "Text": "<p><b>Diophante</b>, n\u00e9(e) en 201 et mort(e) en 300, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/%CE%94%CE%B9%CF%8C%CF%86%CE%B1%CE%BD%CF%84%CE%BF%CF%82_-_Diophantos_-_%D0%94%D0%98%D0%9E%D0%A4%D0%90%D0%9D%D0%A2.jpg/200px-%CE%94%CE%B9%CF%8C%CF%86%CE%B1%CE%BD%CF%84%CE%BF%CF%82_-_Diophantos_-_%D0%94%D0%98%D0%9E%D0%A4%D0%90%D0%9D%D0%A2.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Diophante d'Alexandrie\" target=\"_blank\" title=\"Diophante d'Alexandrie\">Diophante d'Alexandrie</a> (<a href=\"https://commons.wikimedia.org/wiki/File:%CE%94%CE%B9%CF%8C%CF%86%CE%B1%CE%BD%CF%84%CE%BF%CF%82_-_Diophantos_-_%D0%94%D0%98%D0%9E%D0%A4%D0%90%D0%9D%D0%A2.jpg\" target=\"_blank\" title=\"Diophante d'Alexandrie sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 225,
+            "End Year": 295,
+            "Headline": "Liu Hui",
+            "Text": "<p><b>Liu Hui</b>, n\u00e9(e) en 225 et mort(e) en 295, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Hunan_International_Economics_University20.jpg/200px-Hunan_International_Economics_University20.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Liu Hui\" target=\"_blank\" title=\"Liu Hui\">Liu Hui</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Hunan_International_Economics_University20.jpg\" target=\"_blank\" title=\"Liu Hui sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 360,
+            "End Year": 415,
+            "Headline": "Hypatie",
+            "Text": "<p><b>Hypatie</b>, n\u00e9(e) en 360 et mort(e) en 415, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Alfred_Seifert_Hypatia.jpg/200px-Alfred_Seifert_Hypatia.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Hypatie\" target=\"_blank\" title=\"Hypatie\">Hypatie</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Alfred_Seifert_Hypatia.jpg\" target=\"_blank\" title=\"Hypatie sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 476,
+            "End Year": 550,
+            "Headline": "Aryabhata",
+            "Text": "<p><b>Aryabhata</b>, n\u00e9(e) en 476 et mort(e) en 550, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/2064_aryabhata-crp.jpg/200px-2064_aryabhata-crp.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Aryabhata\" target=\"_blank\" title=\"Aryabhata\">Aryabhata</a> (<a href=\"https://commons.wikimedia.org/wiki/File:2064_aryabhata-crp.jpg\" target=\"_blank\" title=\"Aryabhata sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 598,
+            "End Year": 670,
+            "Headline": "Brahmagupta",
+            "Text": "<p><b>Brahmagupta</b>, n\u00e9(e) en 598 et mort(e) en 670, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Hindu_astronomer%2C_19th-century_illustration.jpg/200px-Hindu_astronomer%2C_19th-century_illustration.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Brahmagupta\" target=\"_blank\" title=\"Brahmagupta\">Brahmagupta</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Hindu_astronomer%2C_19th-century_illustration.jpg\" target=\"_blank\" title=\"Brahmagupta sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 750,
+            "End Year": 846,
+            "Headline": "Al-Khw\u0101rizm\u012b",
+            "Text": "<p><b>Mu\u1e25ammad ibn M\u016bs\u0101 Al-Khw\u0101rizm\u012b</b>, n\u00e9(e) en 750 et mort(e) en 846, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": "https://coindesmaths.fr/identites-remarquables-dsm9/",
+            "Articles Sujets": "Identit\u00e9s remarquables",
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/1983_CPA_5426.jpg/200px-1983_CPA_5426.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Al-Khw\u00e2rizm\u00ee\" target=\"_blank\" title=\"Al-Khw\u00e2rizm\u00ee\">Al-Khw\u00e2rizm\u00ee</a> (<a href=\"https://commons.wikimedia.org/wiki/File:1983_CPA_5426.jpg\" target=\"_blank\" title=\"Al-Khw\u00e2rizm\u00ee sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 801,
+            "End Year": 873,
+            "Headline": "Al-Kindi",
+            "Text": "<p><b>Al-Kindi</b>, n\u00e9(e) en 801 et mort(e) en 873, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Al-kindi.jpeg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Al-Kindi\" target=\"_blank\" title=\"Al-Kindi\">Al-Kindi</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Al-kindi.jpeg\" target=\"_blank\" title=\"Al-Kindi sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 965,
+            "End Year": 1038,
+            "Headline": "Ibn al-Haytham",
+            "Text": "<p><b>Ibn al-Haytham</b>, n\u00e9(e) en 965 et mort(e) en 1038, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Hazan.png/200px-Hazan.png",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Alhazen\" target=\"_blank\" title=\"Alhazen\">Alhazen</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Hazan.png\" target=\"_blank\" title=\"Alhazen sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1048,
+            "End Year": 1131,
+            "Headline": "Khayyam",
+            "Text": "<p><b>Omar Khayyam</b>, n\u00e9(e) en 1048 et mort(e) en 1131, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Face_of_Omar_Khayyam_Tableau_Rug.JPG/200px-Face_of_Omar_Khayyam_Tableau_Rug.JPG",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Omar Khayyam\" target=\"_blank\" title=\"Omar Khayyam\">Omar Khayyam</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Face_of_Omar_Khayyam_Tableau_Rug.JPG\" target=\"_blank\" title=\"Omar Khayyam sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1170,
+            "End Year": 1250,
+            "Headline": "Fibonacci",
+            "Text": "<p><b>Leonardo Fibonacci</b>, n\u00e9(e) en 1170 et mort(e) en 1250, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Fibonacci5.jpg/200px-Fibonacci5.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Leonardo Fibonacci\" target=\"_blank\" title=\"Leonardo Fibonacci\">Leonardo Fibonacci</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Fibonacci5.jpg\" target=\"_blank\" title=\"Leonardo Fibonacci sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1323,
+            "End Year": 1382,
+            "Headline": "Oresme",
+            "Text": "<p><b>Nicole Oresme</b>, n\u00e9(e) en 1323 et mort(e) en 1382, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Oresme.jpg/200px-Oresme.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Nicole Oresme\" target=\"_blank\" title=\"Nicole Oresme\">Nicole Oresme</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Oresme.jpg\" target=\"_blank\" title=\"Nicole Oresme sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1380,
+            "End Year": 1429,
+            "Headline": "Al-Kashi",
+            "Text": "<p><b>Al-Kashi</b>, n\u00e9(e) en 1380 et mort(e) en 1429, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Jamshid_bin_Mas%27ud_bin_Mahmud_al-Tabib_al-Kashi%2C_known_as_Ghiyath_%28d._1429%29%3B_Miftah_al-Hisab_signed_ibn_Muhammad_Mu%27min_Taj_al-Din_al-Shirazi%2C_Iran%2C_dated_31_May_1656.jpg/200px-thumbnail.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Al-Kashi\" target=\"_blank\" title=\"Al-Kashi\">Al-Kashi</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Jamshid_bin_Mas%27ud_bin_Mahmud_al-Tabib_al-Kashi%2C_known_as_Ghiyath_%28d._1429%29%3B_Miftah_al-Hisab_signed_ibn_Muhammad_Mu%27min_Taj_al-Din_al-Shirazi%2C_Iran%2C_dated_31_May_1656.jpg\" target=\"_blank\" title=\"Al-Kashi sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1499,
+            "End Year": 1557,
+            "Headline": "Tartaglia",
+            "Text": "<p><b>Niccolo Tartaglia</b>, n\u00e9(e) en 1499 et mort(e) en 1557, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Niccol%C3%B2_Tartaglia.jpg/200px-Niccol%C3%B2_Tartaglia.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Niccol\u00f2 Fontana Tartaglia\" target=\"_blank\" title=\"Niccol\u00f2 Fontana Tartaglia\">Niccol\u00f2 Fontana Tartaglia</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Niccol%C3%B2_Tartaglia.jpg\" target=\"_blank\" title=\"Niccol\u00f2 Fontana Tartaglia sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1501,
+            "End Year": 1576,
+            "Headline": "Cardan",
+            "Text": "<p><b>J\u00e9r\u00f4me Cardan</b>, n\u00e9(e) en 1501 et mort(e) en 1576, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Cardano.jpg/200px-Cardano.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/J\u00e9r\u00f4me Cardan\" target=\"_blank\" title=\"J\u00e9r\u00f4me Cardan\">J\u00e9r\u00f4me Cardan</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Cardano.jpg\" target=\"_blank\" title=\"J\u00e9r\u00f4me Cardan sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1526,
+            "End Year": 1573,
+            "Headline": "Bombelli",
+            "Text": "<p><b>Rapha\u00ebl Bombelli</b>, n\u00e9(e) en 1526 et mort(e) en 1573, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Bombelli_-_Algebra%2C_1572_-_56656.jpg/200px-Bombelli_-_Algebra%2C_1572_-_56656.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Rapha\u00ebl Bombelli\" target=\"_blank\" title=\"Rapha\u00ebl Bombelli\">Rapha\u00ebl Bombelli</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Bombelli_-_Algebra%2C_1572_-_56656.jpg\" target=\"_blank\" title=\"Rapha\u00ebl Bombelli sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1540,
+            "End Year": 1603,
+            "Headline": "Vi\u00e8te",
+            "Text": "<p><b>Fran\u00e7ois Vi\u00e8te</b>, n\u00e9(e) en 1540 et mort(e) en 1603, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Francois_Viete.jpeg/200px-Francois_Viete.jpeg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Fran\u00e7ois Vi\u00e8te\" target=\"_blank\" title=\"Fran\u00e7ois Vi\u00e8te\">Fran\u00e7ois Vi\u00e8te</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Francois_Viete.jpeg\" target=\"_blank\" title=\"Fran\u00e7ois Vi\u00e8te sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1550,
+            "End Year": 1617,
+            "Headline": "Napier",
+            "Text": "<p><b>John Napier</b>, n\u00e9(e) en 1550 et mort(e) en 1617, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/John_Napier.jpg/200px-John_Napier.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/John Napier\" target=\"_blank\" title=\"John Napier\">John Napier</a> (<a href=\"https://commons.wikimedia.org/wiki/File:John_Napier.jpg\" target=\"_blank\" title=\"John Napier sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1564,
+            "End Year": 1642,
+            "Headline": "Galil\u00e9e",
+            "Text": "<p><b>Galil\u00e9e</b>, n\u00e9(e) en 1564 et mort(e) en 1642, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": "https://coindesmaths.fr/somme-des-entiers-impairs-dsm7/",
+            "Articles Sujets": "Somme des entiers impairs",
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Justus_Sustermans_-_Portrait_of_Galileo_Galilei%2C_1636.jpg/200px-Justus_Sustermans_-_Portrait_of_Galileo_Galilei%2C_1636.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Galil\u00e9e (savant)\" target=\"_blank\" title=\"Galil\u00e9e (savant)\">Galil\u00e9e (savant)</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Justus_Sustermans_-_Portrait_of_Galileo_Galilei%2C_1636.jpg\" target=\"_blank\" title=\"Galil\u00e9e (savant) sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1591,
+            "End Year": 1661,
+            "Headline": "Desargues",
+            "Text": "<p><b>Girard Desargues</b>, n\u00e9(e) en 1591 et mort(e) en 1661, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/G%C3%A9rard_Desargues.jpeg/200px-G%C3%A9rard_Desargues.jpeg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Girard Desargues\" target=\"_blank\" title=\"Girard Desargues\">Girard Desargues</a> (<a href=\"https://commons.wikimedia.org/wiki/File:G%C3%A9rard_Desargues.jpeg\" target=\"_blank\" title=\"Girard Desargues sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1596,
+            "End Year": 1650,
+            "Headline": "Descartes",
+            "Text": "<p><b>Ren\u00e9 Descartes</b>, n\u00e9(e) en 1596 et mort(e) en 1650, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Frans_Hals_-_Portret_van_Ren%C3%A9_Descartes.jpg/200px-Frans_Hals_-_Portret_van_Ren%C3%A9_Descartes.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Ren\u00e9 Descartes\" target=\"_blank\" title=\"Ren\u00e9 Descartes\">Ren\u00e9 Descartes</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Frans_Hals_-_Portret_van_Ren%C3%A9_Descartes.jpg\" target=\"_blank\" title=\"Ren\u00e9 Descartes sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1598,
+            "End Year": 1647,
+            "Headline": "Cavalieri",
+            "Text": "<p><b>Bonaventura Cavalieri</b>, n\u00e9(e) en 1598 et mort(e) en 1647, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Bonaventura_Cavalieri.jpeg/200px-Bonaventura_Cavalieri.jpeg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Bonaventura Cavalieri\" target=\"_blank\" title=\"Bonaventura Cavalieri\">Bonaventura Cavalieri</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Bonaventura_Cavalieri.jpeg\" target=\"_blank\" title=\"Bonaventura Cavalieri sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1601,
+            "End Year": 1665,
+            "Headline": "Fermat",
+            "Text": "<p><b>Pierre de Fermat</b>, n\u00e9(e) en 1601 et mort(e) en 1665, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Pierre_de_Fermat.jpg/200px-Pierre_de_Fermat.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Pierre de Fermat\" target=\"_blank\" title=\"Pierre de Fermat\">Pierre de Fermat</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Pierre_de_Fermat.jpg\" target=\"_blank\" title=\"Pierre de Fermat sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1616,
+            "End Year": 1703,
+            "Headline": "Wallis",
+            "Text": "<p><b>John Wallis</b>, n\u00e9(e) en 1616 et mort(e) en 1703, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/John_Wallis_by_Sir_Godfrey_Kneller%2C_Bt.jpg/200px-John_Wallis_by_Sir_Godfrey_Kneller%2C_Bt.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/John Wallis\" target=\"_blank\" title=\"John Wallis\">John Wallis</a> (<a href=\"https://commons.wikimedia.org/wiki/File:John_Wallis_by_Sir_Godfrey_Kneller%2C_Bt.jpg\" target=\"_blank\" title=\"John Wallis sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1622,
+            "End Year": 1703,
+            "Headline": "Viviani",
+            "Text": "<p><b>Vincenzo Viviani</b>, n\u00e9(e) en 1622 et mort(e) en 1703, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": "https://coindesmaths.fr/theoreme-de-viviani-dsm2/",
+            "Articles Sujets": "Th\u00e9or\u00e8me de Viviani",
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Vincenzo_Viviani.jpeg/200px-Vincenzo_Viviani.jpeg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Vincenzo Viviani\" target=\"_blank\" title=\"Vincenzo Viviani\">Vincenzo Viviani</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Vincenzo_Viviani.jpeg\" target=\"_blank\" title=\"Vincenzo Viviani sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1623,
+            "End Year": 1662,
+            "Headline": "Pascal",
+            "Text": "<p><b>Blaise Pascal</b>, n\u00e9(e) en 1623 et mort(e) en 1662, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/FR-631136102_GRA_6025_Portrait_de_Blaise_Pascal_par_Edelinck_%28cropped%29.jpg/200px-FR-631136102_GRA_6025_Portrait_de_Blaise_Pascal_par_Edelinck_%28cropped%29.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Blaise Pascal\" target=\"_blank\" title=\"Blaise Pascal\">Blaise Pascal</a> (<a href=\"https://commons.wikimedia.org/wiki/File:FR-631136102_GRA_6025_Portrait_de_Blaise_Pascal_par_Edelinck_%28cropped%29.jpg\" target=\"_blank\" title=\"Blaise Pascal sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1642,
+            "End Year": 1727,
+            "Headline": "Newton",
+            "Text": "<p><b>Isaac Newton</b>, n\u00e9(e) en 1642 et mort(e) en 1727, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/GodfreyKneller-IsaacNewton-1689.jpg/200px-GodfreyKneller-IsaacNewton-1689.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Isaac Newton\" target=\"_blank\" title=\"Isaac Newton\">Isaac Newton</a> (<a href=\"https://commons.wikimedia.org/wiki/File:GodfreyKneller-IsaacNewton-1689.jpg\" target=\"_blank\" title=\"Isaac Newton sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1646,
+            "End Year": 1716,
+            "Headline": "Leibniz",
+            "Text": "<p><b>Gottfried Wilhelm Leibniz</b>, n\u00e9(e) en 1646 et mort(e) en 1716, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Gottfried_Wilhelm_von_Leibniz.jpg/200px-Gottfried_Wilhelm_von_Leibniz.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Gottfried Wilhelm Leibniz\" target=\"_blank\" title=\"Gottfried Wilhelm Leibniz\">Gottfried Wilhelm Leibniz</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Gottfried_Wilhelm_von_Leibniz.jpg\" target=\"_blank\" title=\"Gottfried Wilhelm Leibniz sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1667,
+            "End Year": 1754,
+            "Headline": "de Moivre",
+            "Text": "<p><b>Abraham de Moivre</b>, n\u00e9(e) en 1667 et mort(e) en 1754, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Abraham_de_moivre.jpg/200px-Abraham_de_moivre.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Abraham de Moivre\" target=\"_blank\" title=\"Abraham de Moivre\">Abraham de Moivre</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Abraham_de_moivre.jpg\" target=\"_blank\" title=\"Abraham de Moivre sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1702,
+            "End Year": 1761,
+            "Headline": "Bayes",
+            "Text": "<p><b>Thomas Bayes</b>, n\u00e9(e) en 1702 et mort(e) en 1761, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Thomas_Bayes.gif/200px-Thomas_Bayes.gif",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Thomas Bayes\" target=\"_blank\" title=\"Thomas Bayes\">Thomas Bayes</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Thomas_Bayes.gif\" target=\"_blank\" title=\"Thomas Bayes sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1704,
+            "End Year": 1752,
+            "Headline": "Cramer",
+            "Text": "<p><b>Gabriel Cramer</b>, n\u00e9(e) en 1704 et mort(e) en 1752, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Gabriel_Cramer.jpg/200px-Gabriel_Cramer.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Gabriel Cramer\" target=\"_blank\" title=\"Gabriel Cramer\">Gabriel Cramer</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Gabriel_Cramer.jpg\" target=\"_blank\" title=\"Gabriel Cramer sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1706,
+            "End Year": 1749,
+            "Headline": "du Ch\u00e2telet",
+            "Text": "<p><b>\u00c9milie du Ch\u00e2telet</b>, n\u00e9(e) en 1706 et mort(e) en 1749, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Ok%C3%A4nd_-_Gabrielle-%C3%89milie_Le_Tonnelier_de_Breteuil_%281706%E2%80%931749%29%2C_Marquise_du_Ch%C3%A2telet_-_NMDrh_796_-_Nationalmuseum.jpg/200px-Ok%C3%A4nd_-_Gabrielle-%C3%89milie_Le_Tonnelier_de_Breteuil_%281706%E2%80%931749%29%2C_Marquise_du_Ch%C3%A2telet_-_NMDrh_796_-_Nationalmuseum.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/\u00c9milie du Ch\u00e2telet\" target=\"_blank\" title=\"\u00c9milie du Ch\u00e2telet\">\u00c9milie du Ch\u00e2telet</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Ok%C3%A4nd_-_Gabrielle-%C3%89milie_Le_Tonnelier_de_Breteuil_%281706%E2%80%931749%29%2C_Marquise_du_Ch%C3%A2telet_-_NMDrh_796_-_Nationalmuseum.jpg\" target=\"_blank\" title=\"\u00c9milie du Ch\u00e2telet sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1707,
+            "End Year": 1783,
+            "Headline": "Euler",
+            "Text": "<p><b>Leonhard Euler</b>, n\u00e9(e) en 1707 et mort(e) en 1783, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Leonhard_Euler_2.jpg/200px-Leonhard_Euler_2.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Leonhard Euler\" target=\"_blank\" title=\"Leonhard Euler\">Leonhard Euler</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Leonhard_Euler_2.jpg\" target=\"_blank\" title=\"Leonhard Euler sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1717,
+            "End Year": 1783,
+            "Headline": "d\u2019Alembert",
+            "Text": "<p><b>Jean Le Rond d\u2019Alembert</b>, n\u00e9(e) en 1717 et mort(e) en 1783, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Jean_Le_Rond_d%27Alembert%2C_by_French_school.jpg/200px-Jean_Le_Rond_d%27Alembert%2C_by_French_school.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Jean Le Rond d'Alembert\" target=\"_blank\" title=\"Jean Le Rond d'Alembert\">Jean Le Rond d'Alembert</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Jean_Le_Rond_d%27Alembert%2C_by_French_school.jpg\" target=\"_blank\" title=\"Jean Le Rond d'Alembert sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1718,
+            "End Year": 1799,
+            "Headline": "Agnesi",
+            "Text": "<p><b>Maria Agnesi</b>, n\u00e9(e) en 1718 et mort(e) en 1799, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Maria_Gaetana_Agnesi.jpg/200px-Maria_Gaetana_Agnesi.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Maria Gaetana Agnesi\" target=\"_blank\" title=\"Maria Gaetana Agnesi\">Maria Gaetana Agnesi</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Maria_Gaetana_Agnesi.jpg\" target=\"_blank\" title=\"Maria Gaetana Agnesi sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1730,
+            "End Year": 1783,
+            "Headline": "B\u00e9zout",
+            "Text": "<p><b>\u00c9tienne B\u00e9zout</b>, n\u00e9(e) en 1730 et mort(e) en 1783, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Etienne_Bezout2.jpg/200px-Etienne_Bezout2.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/\u00c9tienne B\u00e9zout\" target=\"_blank\" title=\"\u00c9tienne B\u00e9zout\">\u00c9tienne B\u00e9zout</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Etienne_Bezout2.jpg\" target=\"_blank\" title=\"\u00c9tienne B\u00e9zout sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1736,
+            "End Year": 1813,
+            "Headline": "Lagrange",
+            "Text": "<p><b>Joseph-Louis de Lagrange</b>, n\u00e9(e) en 1736 et mort(e) en 1813, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/%D0%9B%D0%B0%D0%B3%D1%80%D0%B0%D0%BD%D0%B6.jpg/200px-%D0%9B%D0%B0%D0%B3%D1%80%D0%B0%D0%BD%D0%B6.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Joseph-Louis Lagrange\" target=\"_blank\" title=\"Joseph-Louis Lagrange\">Joseph-Louis Lagrange</a> (<a href=\"https://commons.wikimedia.org/wiki/File:%D0%9B%D0%B0%D0%B3%D1%80%D0%B0%D0%BD%D0%B6.jpg\" target=\"_blank\" title=\"Joseph-Louis Lagrange sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1746,
+            "End Year": 1818,
+            "Headline": "Monge",
+            "Text": "<p><b>Gaspard Monge</b>, n\u00e9(e) en 1746 et mort(e) en 1818, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Jean-Baptiste_Mauzaisse_%E2%80%93_Gaspard_Monge%2C_Comte_de_Peluse_%281746-1818%29_Ch%C3%A2teau_de_Versailles.png/200px-Jean-Baptiste_Mauzaisse_%E2%80%93_Gaspard_Monge%2C_Comte_de_Peluse_%281746-1818%29_Ch%C3%A2teau_de_Versailles.png",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Gaspard Monge\" target=\"_blank\" title=\"Gaspard Monge\">Gaspard Monge</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Jean-Baptiste_Mauzaisse_%E2%80%93_Gaspard_Monge%2C_Comte_de_Peluse_%281746-1818%29_Ch%C3%A2teau_de_Versailles.png\" target=\"_blank\" title=\"Gaspard Monge sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1749,
+            "End Year": 1827,
+            "Headline": "Laplace",
+            "Text": "<p><b>Pierre-Simon de Laplace</b>, n\u00e9(e) en 1749 et mort(e) en 1827, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Pierre-Simon_Laplace.jpg/200px-Pierre-Simon_Laplace.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Pierre-Simon de Laplace\" target=\"_blank\" title=\"Pierre-Simon de Laplace\">Pierre-Simon de Laplace</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Pierre-Simon_Laplace.jpg\" target=\"_blank\" title=\"Pierre-Simon de Laplace sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1752,
+            "End Year": 1833,
+            "Headline": "Legendre",
+            "Text": "<p><b>Adrien-Marie Legendre</b>, n\u00e9(e) en 1752 et mort(e) en 1833, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Legendre.jpg/200px-Legendre.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Adrien-Marie Legendre\" target=\"_blank\" title=\"Adrien-Marie Legendre\">Adrien-Marie Legendre</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Legendre.jpg\" target=\"_blank\" title=\"Adrien-Marie Legendre sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1768,
+            "End Year": 1830,
+            "Headline": "Fourier",
+            "Text": "<p><b>Joseph Fourier</b>, n\u00e9(e) en 1768 et mort(e) en 1830, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Fourier2.jpg/200px-Fourier2.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Joseph Fourier\" target=\"_blank\" title=\"Joseph Fourier\">Joseph Fourier</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Fourier2.jpg\" target=\"_blank\" title=\"Joseph Fourier sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1776,
+            "End Year": 1831,
+            "Headline": "Germain",
+            "Text": "<p><b>Sophie Germain</b>, n\u00e9(e) en 1776 et mort(e) en 1831, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Germain.jpeg/200px-Germain.jpeg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Sophie Germain\" target=\"_blank\" title=\"Sophie Germain\">Sophie Germain</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Germain.jpeg\" target=\"_blank\" title=\"Sophie Germain sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1777,
+            "End Year": 1855,
+            "Headline": "Gauss",
+            "Text": "<p><b>Carl Friedrich Gauss</b>, n\u00e9(e) en 1777 et mort(e) en 1855, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": "https://coindesmaths.fr/somme-des-entiers-dsm1/",
+            "Articles Sujets": "Somme des entiers",
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Carl_Friedrich_Gauss.jpg/200px-Carl_Friedrich_Gauss.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Carl Friedrich Gauss\" target=\"_blank\" title=\"Carl Friedrich Gauss\">Carl Friedrich Gauss</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Carl_Friedrich_Gauss.jpg\" target=\"_blank\" title=\"Carl Friedrich Gauss sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1781,
+            "End Year": 1840,
+            "Headline": "Poisson",
+            "Text": "<p><b>Sim\u00e9on Denis Poisson</b>, n\u00e9(e) en 1781 et mort(e) en 1840, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Simeon_Poisson_%28cropped%29.jpg/200px-Simeon_Poisson_%28cropped%29.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Sim\u00e9on Denis Poisson\" target=\"_blank\" title=\"Sim\u00e9on Denis Poisson\">Sim\u00e9on Denis Poisson</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Simeon_Poisson_%28cropped%29.jpg\" target=\"_blank\" title=\"Sim\u00e9on Denis Poisson sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1789,
+            "End Year": 1857,
+            "Headline": "Cauchy",
+            "Text": "<p><b>Augustin Louis Cauchy</b>, n\u00e9(e) en 1789 et mort(e) en 1857, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": "https://coindesmaths.fr/inegalite-de-cauchy-schwarz-dsm10/",
+            "Articles Sujets": "In\u00e9galit\u00e9 de Cauchy-Schwarz",
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Augustin_Louis_Cauchy.jpg/200px-Augustin_Louis_Cauchy.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Augustin Louis Cauchy\" target=\"_blank\" title=\"Augustin Louis Cauchy\">Augustin Louis Cauchy</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Augustin_Louis_Cauchy.jpg\" target=\"_blank\" title=\"Augustin Louis Cauchy sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1790,
+            "End Year": 1868,
+            "Headline": "M\u00f6bius",
+            "Text": "<p><b>August M\u00f6bius</b>, n\u00e9(e) en 1790 et mort(e) en 1868, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/August_Ferdinand_M%C3%B6bius.png/200px-August_Ferdinand_M%C3%B6bius.png",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/August Ferdinand M\u00f6bius\" target=\"_blank\" title=\"August Ferdinand M\u00f6bius\">August Ferdinand M\u00f6bius</a> (<a href=\"https://commons.wikimedia.org/wiki/File:August_Ferdinand_M%C3%B6bius.png\" target=\"_blank\" title=\"August Ferdinand M\u00f6bius sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1793,
+            "End Year": 1880,
+            "Headline": "Chasles",
+            "Text": "<p><b>Michel Chasles</b>, n\u00e9(e) en 1793 et mort(e) en 1880, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Michel_Chasles.jpg/200px-Michel_Chasles.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Michel Chasles\" target=\"_blank\" title=\"Michel Chasles\">Michel Chasles</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Michel_Chasles.jpg\" target=\"_blank\" title=\"Michel Chasles sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1796,
+            "End Year": 1878,
+            "Headline": "Bienaym\u00e9",
+            "Text": "<p><b>Ir\u00e9n\u00e9e-Jules Bienaym\u00e9</b>, n\u00e9(e) en 1796 et mort(e) en 1878, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Ir%C3%A9n%C3%A9e-Jules_Bienaym%C3%A9.jpeg/200px-Ir%C3%A9n%C3%A9e-Jules_Bienaym%C3%A9.jpeg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Ir\u00e9n\u00e9e-Jules Bienaym\u00e9\" target=\"_blank\" title=\"Ir\u00e9n\u00e9e-Jules Bienaym\u00e9\">Ir\u00e9n\u00e9e-Jules Bienaym\u00e9</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Ir%C3%A9n%C3%A9e-Jules_Bienaym%C3%A9.jpeg\" target=\"_blank\" title=\"Ir\u00e9n\u00e9e-Jules Bienaym\u00e9 sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1805,
+            "End Year": 1859,
+            "Headline": "Dirichlet",
+            "Text": "<p><b>Johann Peter Gustav Lejeune Dirichlet</b>, n\u00e9(e) en 1805 et mort(e) en 1859, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Dirichlet.jpg/200px-Dirichlet.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Johann Peter Gustav Lejeune Dirichlet\" target=\"_blank\" title=\"Johann Peter Gustav Lejeune Dirichlet\">Johann Peter Gustav Lejeune Dirichlet</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Dirichlet.jpg\" target=\"_blank\" title=\"Johann Peter Gustav Lejeune Dirichlet sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1805,
+            "End Year": 1865,
+            "Headline": "Hamilton",
+            "Text": "<p><b>William Hamilton</b>, n\u00e9(e) en 1805 et mort(e) en 1865, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/William_Rowan_Hamilton_painting.jpg/200px-William_Rowan_Hamilton_painting.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/William Rowan Hamilton\" target=\"_blank\" title=\"William Rowan Hamilton\">William Rowan Hamilton</a> (<a href=\"https://commons.wikimedia.org/wiki/File:William_Rowan_Hamilton_painting.jpg\" target=\"_blank\" title=\"William Rowan Hamilton sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1811,
+            "End Year": 1832,
+            "Headline": "Galois",
+            "Text": "<p><b>\u00c9variste Galois</b>, n\u00e9(e) en 1811 et mort(e) en 1832, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Evariste_galois.jpg/200px-Evariste_galois.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/\u00c9variste Galois\" target=\"_blank\" title=\"\u00c9variste Galois\">\u00c9variste Galois</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Evariste_galois.jpg\" target=\"_blank\" title=\"\u00c9variste Galois sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1814,
+            "End Year": 1897,
+            "Headline": "Sylvester",
+            "Text": "<p><b>James Sylvester</b>, n\u00e9(e) en 1814 et mort(e) en 1897, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/James_Joseph_Sylvester.jpg/200px-James_Joseph_Sylvester.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/James Joseph Sylvester\" target=\"_blank\" title=\"James Joseph Sylvester\">James Joseph Sylvester</a> (<a href=\"https://commons.wikimedia.org/wiki/File:James_Joseph_Sylvester.jpg\" target=\"_blank\" title=\"James Joseph Sylvester sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1815,
+            "End Year": 1864,
+            "Headline": "Boole",
+            "Text": "<p><b>George Boole</b>, n\u00e9(e) en 1815 et mort(e) en 1864, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/George_Boole_color.jpg/200px-George_Boole_color.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/George Boole\" target=\"_blank\" title=\"George Boole\">George Boole</a> (<a href=\"https://commons.wikimedia.org/wiki/File:George_Boole_color.jpg\" target=\"_blank\" title=\"George Boole sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1820,
+            "End Year": 1910,
+            "Headline": "Nightingale",
+            "Text": "<p><b>Florence Nightingale</b>, n\u00e9(e) en 1820 et mort(e) en 1910, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Florence_Nightingale.jpg/200px-Florence_Nightingale.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Florence Nightingale\" target=\"_blank\" title=\"Florence Nightingale\">Florence Nightingale</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Florence_Nightingale.jpg\" target=\"_blank\" title=\"Florence Nightingale sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1821,
+            "End Year": 1894,
+            "Headline": "Tchebychev",
+            "Text": "<p><b>Pafnouti Tchebychev</b>, n\u00e9(e) en 1821 et mort(e) en 1894, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Pafnuty_Lvovich_Chebyshev.jpg/200px-Pafnuty_Lvovich_Chebyshev.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Pafnouti Tchebychev\" target=\"_blank\" title=\"Pafnouti Tchebychev\">Pafnouti Tchebychev</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Pafnuty_Lvovich_Chebyshev.jpg\" target=\"_blank\" title=\"Pafnouti Tchebychev sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1821,
+            "End Year": 1895,
+            "Headline": "Cayley",
+            "Text": "<p><b>Arthur Cayley</b>, n\u00e9(e) en 1821 et mort(e) en 1895, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Arthur_Cayley.jpg/200px-Arthur_Cayley.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Arthur Cayley\" target=\"_blank\" title=\"Arthur Cayley\">Arthur Cayley</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Arthur_Cayley.jpg\" target=\"_blank\" title=\"Arthur Cayley sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1822,
+            "End Year": 1911,
+            "Headline": "Galton",
+            "Text": "<p><b>Francis Galton</b>, n\u00e9(e) en 1822 et mort(e) en 1911, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": "https://coindesmaths.fr/planche-de-galton/",
+            "Articles Sujets": "Planche de Galton",
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Sir_Francis_Galton%2C_1890s.jpg/200px-Sir_Francis_Galton%2C_1890s.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Francis Galton\" target=\"_blank\" title=\"Francis Galton\">Francis Galton</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Sir_Francis_Galton%2C_1890s.jpg\" target=\"_blank\" title=\"Francis Galton sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1826,
+            "End Year": 1866,
+            "Headline": "Riemann",
+            "Text": "<p><b>Bernhard Riemann</b>, n\u00e9(e) en 1826 et mort(e) en 1866, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Georg_Friedrich_Bernhard_Riemann.jpeg/200px-Georg_Friedrich_Bernhard_Riemann.jpeg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Bernhard Riemann\" target=\"_blank\" title=\"Bernhard Riemann\">Bernhard Riemann</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Georg_Friedrich_Bernhard_Riemann.jpeg\" target=\"_blank\" title=\"Bernhard Riemann sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1831,
+            "End Year": 1916,
+            "Headline": "Dedekind",
+            "Text": "<p><b>Richard Dedekind</b>, n\u00e9(e) en 1831 et mort(e) en 1916, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Richard_Dedekind_1900s.jpg/200px-Richard_Dedekind_1900s.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Richard Dedekind\" target=\"_blank\" title=\"Richard Dedekind\">Richard Dedekind</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Richard_Dedekind_1900s.jpg\" target=\"_blank\" title=\"Richard Dedekind sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1843,
+            "End Year": 1921,
+            "Headline": "Schwarz",
+            "Text": "<p><b>Hermann Amandus Schwarz</b>, n\u00e9(e) en 1843 et mort(e) en 1921, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": "https://coindesmaths.fr/inegalite-de-cauchy-schwarz-dsm10/",
+            "Articles Sujets": "In\u00e9galit\u00e9 de Cauchy-Schwarz",
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Karl_Hermann_Amandus_Schwarz.jpg/200px-Karl_Hermann_Amandus_Schwarz.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Hermann Amandus Schwarz\" target=\"_blank\" title=\"Hermann Amandus Schwarz\">Hermann Amandus Schwarz</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Karl_Hermann_Amandus_Schwarz.jpg\" target=\"_blank\" title=\"Hermann Amandus Schwarz sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1845,
+            "End Year": 1918,
+            "Headline": "Cantor",
+            "Text": "<p><b>Georg Cantor</b>, n\u00e9(e) en 1845 et mort(e) en 1918, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Georg_Cantor2.jpg/200px-Georg_Cantor2.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Georg Cantor\" target=\"_blank\" title=\"Georg Cantor\">Georg Cantor</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Georg_Cantor2.jpg\" target=\"_blank\" title=\"Georg Cantor sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1849,
+            "End Year": 1925,
+            "Headline": "Klein",
+            "Text": "<p><b>Felix Klein</b>, n\u00e9(e) en 1849 et mort(e) en 1925, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Felix_Christian_Klein.jpg/200px-Felix_Christian_Klein.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Felix Klein\" target=\"_blank\" title=\"Felix Klein\">Felix Klein</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Felix_Christian_Klein.jpg\" target=\"_blank\" title=\"Felix Klein sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1850,
+            "End Year": 1891,
+            "Headline": "Kovalevska\u00efa",
+            "Text": "<p><b>Sofia Kovalevska\u00efa</b>, n\u00e9(e) en 1850 et mort(e) en 1891, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Sofja_Wassiljewna_Kowalewskaja_1.jpg/200px-Sofja_Wassiljewna_Kowalewskaja_1.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Sofia Kovalevska\u00efa\" target=\"_blank\" title=\"Sofia Kovalevska\u00efa\">Sofia Kovalevska\u00efa</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Sofja_Wassiljewna_Kowalewskaja_1.jpg\" target=\"_blank\" title=\"Sofia Kovalevska\u00efa sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1850,
+            "End Year": 1925,
+            "Headline": "Heaviside",
+            "Text": "<p><b>Oliver Heaviside</b>, n\u00e9(e) en 1850 et mort(e) en 1925, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Oheaviside.jpg/200px-Oheaviside.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Oliver Heaviside\" target=\"_blank\" title=\"Oliver Heaviside\">Oliver Heaviside</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Oheaviside.jpg\" target=\"_blank\" title=\"Oliver Heaviside sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1854,
+            "End Year": 1912,
+            "Headline": "Poincar\u00e9",
+            "Text": "<p><b>Henri Poincar\u00e9</b>, n\u00e9(e) en 1854 et mort(e) en 1912, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Henri_Poincar%C3%A9-2.jpg/200px-Henri_Poincar%C3%A9-2.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Henri Poincar\u00e9\" target=\"_blank\" title=\"Henri Poincar\u00e9\">Henri Poincar\u00e9</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Henri_Poincar%C3%A9-2.jpg\" target=\"_blank\" title=\"Henri Poincar\u00e9 sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1856,
+            "End Year": 1922,
+            "Headline": "Markov",
+            "Text": "<p><b>Andre\u00ef Markov</b>, n\u00e9(e) en 1856 et mort(e) en 1922, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/AAMarkov.jpg/200px-AAMarkov.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Andre\u00ef Markov (math\u00e9maticien)\" target=\"_blank\" title=\"Andre\u00ef Markov (math\u00e9maticien)\">Andre\u00ef Markov (math\u00e9maticien)</a> (<a href=\"https://commons.wikimedia.org/wiki/File:AAMarkov.jpg\" target=\"_blank\" title=\"Andre\u00ef Markov (math\u00e9maticien) sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1858,
+            "End Year": 1932,
+            "Headline": "Peano",
+            "Text": "<p><b>Giuseppe Peano</b>, n\u00e9(e) en 1858 et mort(e) en 1932, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Giuseppe_Peano.jpg/200px-Giuseppe_Peano.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Giuseppe Peano\" target=\"_blank\" title=\"Giuseppe Peano\">Giuseppe Peano</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Giuseppe_Peano.jpg\" target=\"_blank\" title=\"Giuseppe Peano sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1862,
+            "End Year": 1943,
+            "Headline": "Hilbert",
+            "Text": "<p><b>David Hilbert</b>, n\u00e9(e) en 1862 et mort(e) en 1943, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Hilbert.jpg/200px-Hilbert.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/David Hilbert\" target=\"_blank\" title=\"David Hilbert\">David Hilbert</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Hilbert.jpg\" target=\"_blank\" title=\"David Hilbert sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1871,
+            "End Year": 1956,
+            "Headline": "Borel",
+            "Text": "<p><b>\u00c9mile Borel</b>, n\u00e9(e) en 1871 et mort(e) en 1956, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Emile_Borel-1932.jpg/200px-Emile_Borel-1932.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/\u00c9mile Borel\" target=\"_blank\" title=\"\u00c9mile Borel\">\u00c9mile Borel</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Emile_Borel-1932.jpg\" target=\"_blank\" title=\"\u00c9mile Borel sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1872,
+            "End Year": 1970,
+            "Headline": "Russell",
+            "Text": "<p><b>Bertrand Russell</b>, n\u00e9(e) en 1872 et mort(e) en 1970, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Bertrand_Russell_cropped.jpg/200px-Bertrand_Russell_cropped.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Bertrand Russell\" target=\"_blank\" title=\"Bertrand Russell\">Bertrand Russell</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Bertrand_Russell_cropped.jpg\" target=\"_blank\" title=\"Bertrand Russell sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1875,
+            "End Year": 1941,
+            "Headline": "Lebesgue",
+            "Text": "<p><b>Henri-L\u00e9on Lebesgue</b>, n\u00e9(e) en 1875 et mort(e) en 1941, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/LebesgueH.gif/200px-LebesgueH.gif",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Henri-L\u00e9on Lebesgue\" target=\"_blank\" title=\"Henri-L\u00e9on Lebesgue\">Henri-L\u00e9on Lebesgue</a> (<a href=\"https://commons.wikimedia.org/wiki/File:LebesgueH.gif\" target=\"_blank\" title=\"Henri-L\u00e9on Lebesgue sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1882,
+            "End Year": 1935,
+            "Headline": "Noether",
+            "Text": "<p><b>Emmy Noether</b>, n\u00e9(e) en 1882 et mort(e) en 1935, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Noether.jpg/200px-Noether.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Emmy Noether\" target=\"_blank\" title=\"Emmy Noether\">Emmy Noether</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Noether.jpg\" target=\"_blank\" title=\"Emmy Noether sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1903,
+            "End Year": 1987,
+            "Headline": "Kolmogorov",
+            "Text": "<p><b>Andre\u00ef Nikola\u00efevitch Kolmogorov</b>, n\u00e9(e) en 1903 et mort(e) en 1987, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Andrej_Nikolajewitsch_Kolmogorov.jpg/200px-Andrej_Nikolajewitsch_Kolmogorov.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Andre\u00ef Kolmogorov\" target=\"_blank\" title=\"Andre\u00ef Kolmogorov\">Andre\u00ef Kolmogorov</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Andrej_Nikolajewitsch_Kolmogorov.jpg\" target=\"_blank\" title=\"Andre\u00ef Kolmogorov sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1903,
+            "End Year": 1957,
+            "Headline": "von Neumann",
+            "Text": "<p><b>John von Neumann</b>, n\u00e9(e) en 1903 et mort(e) en 1957, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/JohnvonNeumann-LosAlamos.jpg/200px-JohnvonNeumann-LosAlamos.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/John von Neumann\" target=\"_blank\" title=\"John von Neumann\">John von Neumann</a> (<a href=\"https://commons.wikimedia.org/wiki/File:JohnvonNeumann-LosAlamos.jpg\" target=\"_blank\" title=\"John von Neumann sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1906,
+            "End Year": 1978,
+            "Headline": "G\u00f6del",
+            "Text": "<p><b>Kurt G\u00f6del</b>, n\u00e9(e) en 1906 et mort(e) en 1978, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Young_Kurt_G%C3%B6del_as_a_student_in_1925.jpg/200px-Young_Kurt_G%C3%B6del_as_a_student_in_1925.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Kurt G\u00f6del\" target=\"_blank\" title=\"Kurt G\u00f6del\">Kurt G\u00f6del</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Young_Kurt_G%C3%B6del_as_a_student_in_1925.jpg\" target=\"_blank\" title=\"Kurt G\u00f6del sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1912,
+            "End Year": 1954,
+            "Headline": "Turing",
+            "Text": "<p><b>Alan Turing</b>, n\u00e9(e) en 1912 et mort(e) en 1954, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Alan_Turing_%281912-1954%29_in_1936_at_Princeton_University.jpg/200px-Alan_Turing_%281912-1954%29_in_1936_at_Princeton_University.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Alan Turing\" target=\"_blank\" title=\"Alan Turing\">Alan Turing</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Alan_Turing_%281912-1954%29_in_1936_at_Princeton_University.jpg\" target=\"_blank\" title=\"Alan Turing sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1913,
+            "End Year": 1996,
+            "Headline": "Erd\u0151s",
+            "Text": "<p><b>Paul Erd\u0151s</b>, n\u00e9(e) en 1913 et mort(e) en 1996, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Erdos_head_budapest_fall_1992.jpg/200px-Erdos_head_budapest_fall_1992.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Paul Erd\u0151s\" target=\"_blank\" title=\"Paul Erd\u0151s\">Paul Erd\u0151s</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Erdos_head_budapest_fall_1992.jpg\" target=\"_blank\" title=\"Paul Erd\u0151s sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1914,
+            "End Year": 2010,
+            "Headline": "Gardner",
+            "Text": "<p><b>Martin Gardner</b>, n\u00e9(e) en 1914 et mort(e) en 2010, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Author_Martin_Gardner_at_a_CSICOP_Executive_Council_Meeting_in_1979.jpg/200px-Author_Martin_Gardner_at_a_CSICOP_Executive_Council_Meeting_in_1979.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Martin Gardner\" target=\"_blank\" title=\"Martin Gardner\">Martin Gardner</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Author_Martin_Gardner_at_a_CSICOP_Executive_Council_Meeting_in_1979.jpg\" target=\"_blank\" title=\"Martin Gardner sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1916,
+            "End Year": 2001,
+            "Headline": "Shannon",
+            "Text": "<p><b>Claude Shannon</b>, n\u00e9(e) en 1916 et mort(e) en 2001, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/ClaudeShannon_MFO3807.jpg/200px-ClaudeShannon_MFO3807.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Claude Shannon\" target=\"_blank\" title=\"Claude Shannon\">Claude Shannon</a> (<a href=\"https://commons.wikimedia.org/wiki/File:ClaudeShannon_MFO3807.jpg\" target=\"_blank\" title=\"Claude Shannon sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1918,
+            "End Year": 2020,
+            "Headline": "Johnson",
+            "Text": "<p><b>Katherine Johnson</b>, n\u00e9(e) en 1918 et mort(e) en 2020, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Katherine_Johnson_in_2008.jpg/200px-Katherine_Johnson_in_2008.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Katherine Johnson\" target=\"_blank\" title=\"Katherine Johnson\">Katherine Johnson</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Katherine_Johnson_in_2008.jpg\" target=\"_blank\" title=\"Katherine Johnson sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1924,
+            "End Year": 2010,
+            "Headline": "Mandelbrot",
+            "Text": "<p><b>Benoit Mandelbrot</b>, n\u00e9(e) en 1924 et mort(e) en 2010, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Benoit_Mandelbrot_mg_1804-d.jpg/200px-Benoit_Mandelbrot_mg_1804-d.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Beno\u00eet Mandelbrot\" target=\"_blank\" title=\"Beno\u00eet Mandelbrot\">Beno\u00eet Mandelbrot</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Benoit_Mandelbrot_mg_1804-d.jpg\" target=\"_blank\" title=\"Beno\u00eet Mandelbrot sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1928,
+            "End Year": 2015,
+            "Headline": "Nash",
+            "Text": "<p><b>John Nash</b>, n\u00e9(e) en 1928 et mort(e) en 2015, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/John_Forbes_Nash%2C_Jr._by_Peter_Badge.jpg/200px-John_Forbes_Nash%2C_Jr._by_Peter_Badge.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/John Forbes Nash\" target=\"_blank\" title=\"John Forbes Nash\">John Forbes Nash</a> (<a href=\"https://commons.wikimedia.org/wiki/File:John_Forbes_Nash%2C_Jr._by_Peter_Badge.jpg\" target=\"_blank\" title=\"John Forbes Nash sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1937,
+            "End Year": 2020,
+            "Headline": "Conway",
+            "Text": "<p><b>John Conway</b>, n\u00e9(e) en 1937 et mort(e) en 2020, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/John_H_Conway_2005_%28cropped%29_%282%29.jpg/200px-John_H_Conway_2005_%28cropped%29_%282%29.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/John Horton Conway\" target=\"_blank\" title=\"John Horton Conway\">John Horton Conway</a> (<a href=\"https://commons.wikimedia.org/wiki/File:John_H_Conway_2005_%28cropped%29_%282%29.jpg\" target=\"_blank\" title=\"John Horton Conway sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1954,
+            "End Year": null,
+            "Headline": "Ghys",
+            "Text": "<p><b>\u00c9tienne Ghys</b>, n\u00e9(e) en 1954, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/%C3%89tienne_Ghys.jpeg/200px-%C3%89tienne_Ghys.jpeg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/\u00c9tienne Ghys\" target=\"_blank\" title=\"\u00c9tienne Ghys\">\u00c9tienne Ghys</a> (<a href=\"https://commons.wikimedia.org/wiki/File:%C3%89tienne_Ghys.jpeg\" target=\"_blank\" title=\"\u00c9tienne Ghys sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1973,
+            "End Year": null,
+            "Headline": "Villani",
+            "Text": "<p><b>C\u00e9dric Villani</b>, n\u00e9(e) en 1973, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Cedric_Villani_at_his_office_2015_n3.jpg/200px-Cedric_Villani_at_his_office_2015_n3.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/C\u00e9dric Villani\" target=\"_blank\" title=\"C\u00e9dric Villani\">C\u00e9dric Villani</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Cedric_Villani_at_his_office_2015_n3.jpg\" target=\"_blank\" title=\"C\u00e9dric Villani sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1977,
+            "End Year": 2017,
+            "Headline": "Mirzakhani",
+            "Text": "<p><b>Maryam Mirzakhani</b>, n\u00e9(e) en 1977 et mort(e) en 2017, est un(e) math\u00e9maticien(ne) reconnu(e).</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Maryam_Mirzakhani_in_Seoul_2014.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Maryam Mirzakhani\" target=\"_blank\" title=\"Maryam Mirzakhani\">Maryam Mirzakhani</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Maryam_Mirzakhani_in_Seoul_2014.jpg\" target=\"_blank\" title=\"Maryam Mirzakhani sur Wikimedia\">Wikimedia</a>)"
+        }
+    ],
+    "evenements": [
+        {
+            "Year": -1800,
+            "Headline": "Plimpton 322",
+            "Text": "<p><b>Plimpton 322</b>, cr\u00e9\u00e9 en -1800, est un objet math\u00e9matique reconnu.</p>",
+            "Articles URLs": "https://coindesmaths.fr/theoreme-de-pythagore-dsm4/",
+            "Articles Sujets": "Th\u00e9or\u00e8me de Pythagore",
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Plimpton_322.jpg/200px-Plimpton_322.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Plimpton 322\" target=\"_blank\" title=\"Plimpton 322\">Plimpton 322</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Plimpton_322.jpg\" target=\"_blank\" title=\"Plimpton 322 sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": -1600,
+            "Headline": "Papyrus Rhind",
+            "Text": "<p><b>Papyrus Rhind</b>, cr\u00e9\u00e9 en -1600, est un objet math\u00e9matique reconnu.</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Rhind_Mathematical_Papyrus.jpg/200px-Rhind_Mathematical_Papyrus.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Papyrus Rhind\" target=\"_blank\" title=\"Papyrus Rhind\">Papyrus Rhind</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Rhind_Mathematical_Papyrus.jpg\" target=\"_blank\" title=\"Papyrus Rhind sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": -300,
+            "Headline": "\u00c9l\u00e9ments d'Euclide",
+            "Text": "<p><b>\u00c9l\u00e9ments d'Euclide</b>, cr\u00e9\u00e9 en -300, est un objet math\u00e9matique reconnu.</p>",
+            "Articles URLs": "https://coindesmaths.fr/somme-des-angles-dun-triangle-dsm3/,https://coindesmaths.fr/identites-remarquables-dsm9/",
+            "Articles Sujets": "Somme des angles d\u2019un triangle,Identit\u00e9s remarquables",
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Title_page_of_Sir_Henry_Billingsley%27s_first_English_version_of_Euclid%27s_Elements%2C_1570_%28560x900%29.jpg/200px-Title_page_of_Sir_Henry_Billingsley%27s_first_English_version_of_Euclid%27s_Elements%2C_1570_%28560x900%29.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/\u00c9l\u00e9ments (Euclide)\" target=\"_blank\" title=\"\u00c9l\u00e9ments (Euclide)\">\u00c9l\u00e9ments (Euclide)</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Title_page_of_Sir_Henry_Billingsley%27s_first_English_version_of_Euclid%27s_Elements%2C_1570_%28560x900%29.jpg\" target=\"_blank\" title=\"\u00c9l\u00e9ments (Euclide) sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": -100,
+            "Headline": "Zhoubi Suanjing",
+            "Text": "<p><b>Zhoubi Suanjing</b>, cr\u00e9\u00e9 en -100, est un objet math\u00e9matique reconnu.</p>",
+            "Articles URLs": "https://coindesmaths.fr/theoreme-de-pythagore-dsm4/",
+            "Articles Sujets": "Th\u00e9or\u00e8me de Pythagore",
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Chinese_pythagoras.jpg/200px-Chinese_pythagoras.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Zhoubi Suanjing\" target=\"_blank\" title=\"Zhoubi Suanjing\">Zhoubi Suanjing</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Chinese_pythagoras.jpg\" target=\"_blank\" title=\"Zhoubi Suanjing sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 820,
+            "Headline": "Al-Jabr",
+            "Text": "<p><b>Al-Jabr</b>, cr\u00e9\u00e9 en 820, est un objet math\u00e9matique reconnu.</p>",
+            "Articles URLs": "https://coindesmaths.fr/identites-remarquables-dsm9/",
+            "Articles Sujets": "Identit\u00e9s remarquables",
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Image-Al-Kit%C4%81b_al-mu%E1%B8%ABta%E1%B9%A3ar_f%C4%AB_%E1%B8%A5is%C4%81b_al-%C4%9Fabr_wa-l-muq%C4%81bala.jpg/200px-Image-Al-Kit%C4%81b_al-mu%E1%B8%ABta%E1%B9%A3ar_f%C4%AB_%E1%B8%A5is%C4%81b_al-%C4%9Fabr_wa-l-muq%C4%81bala.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Abr\u00e9g\u00e9 du calcul par la restauration et la comparaison\" target=\"_blank\" title=\"Abr\u00e9g\u00e9 du calcul par la restauration et la comparaison\">Abr\u00e9g\u00e9 du calcul par la restauration et la comparaison</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Image-Al-Kit%C4%81b_al-mu%E1%B8%ABta%E1%B9%A3ar_f%C4%AB_%E1%B8%A5is%C4%81b_al-%C4%9Fabr_wa-l-muq%C4%81bala.jpg\" target=\"_blank\" title=\"Abr\u00e9g\u00e9 du calcul par la restauration et la comparaison sur Wikimedia\">Wikimedia</a>)"
+        },
+        {
+            "Year": 1202,
+            "Headline": "Liber Abaci",
+            "Text": "<p><b>Liber Abaci</b>, cr\u00e9\u00e9 en 1202, est un objet math\u00e9matique reconnu.</p>",
+            "Articles URLs": null,
+            "Articles Sujets": null,
+            "Media": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Liber_abbaci_magliab_f124r.jpg/200px-Liber_abbaci_magliab_f124r.jpg",
+            "Media Caption": "Source : <a href=\"https://fr.wikipedia.org/wiki/Liber abaci\" target=\"_blank\" title=\"Liber abaci\">Liber abaci</a> (<a href=\"https://commons.wikimedia.org/wiki/File:Liber_abbaci_magliab_f124r.jpg\" target=\"_blank\" title=\"Liber abaci sur Wikimedia\">Wikimedia</a>)"
+        }
+    ]
+}
