@@ -32,14 +32,17 @@ html, body {
 /*					Éléments de base						*/
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-html {
+html, body {
 	font-family: "Source Sans Pro", Helvetica, sans-serif;
 	color: var(--color-base-font);
 	background-color: var(--color-background);
 }
 
-h1 {
+h1, h2, h3 {
 	font-family: Bitter, Georgia, serif;
+}
+
+h1 {
 	text-align: center;
 	margin-top: 0.9em;
 	position: fixed;
@@ -207,7 +210,7 @@ h1 {
     border-radius: 1.25em;
 	border: none;
 	font-size: 1.125em;
-	overflow: auto;
+	overflow: hidden;
 	z-index: 5;
     -webkit-box-shadow: 0 0 0.5rem 500vw rgba(0, 0, 0, 0.6);
             box-shadow: 0 0 0.5rem 500vw rgba(0, 0, 0, 0.6);
@@ -244,6 +247,8 @@ h1 {
 	float: left;
 	padding: 1.25em 1.25em 0 1.25em;
 	font-size: 0.75em;
+	position: sticky;
+    top: 0;
 }
 
 .info-photo {
@@ -279,7 +284,12 @@ h1 {
 	padding: 0 1.25em 1.25em 1.25em;
 }
 
-.info-lien {
+.info-liens hr {
+	margin-top: 15px;
+	border-color: var(--color-regle-date-clair);
+}
+
+a.info-lien {
 	background: var(--color-info-lien-background);
 	border: 0.0625em solid var(--color-info-lien-border);
 	color: var(--color-info-lien-font);
@@ -293,7 +303,8 @@ h1 {
 }
 
 #informations .info-contenu {
-	padding-left: 1em
+	padding-left: 1em;
+}
 
 #informations .info-flex {
 	-webkit-box-align: stretch;
@@ -304,9 +315,15 @@ h1 {
 	        justify-content: flex-start;
 }
 
+#informations .info-flex::before {
 	-ms-flex-item-align: stretch;
 	    -ms-grid-row-align: stretch;
 	    align-self: stretch;
+	content: '';
+	border: 1px solid var(--color-regle-date-clair);
+	margin-top: 1em;
+}
+
 #informations .info-contenu:nth-child(1) {
 	-webkit-box-flex: 4;
 	    -ms-flex: 4;
@@ -339,6 +356,7 @@ h1 {
 	border-left: none;
 	background: var(--color-barre-outils-background);
 	padding: 0.1em;
+	z-index: 1;
 }
 
 .outil {
@@ -348,6 +366,11 @@ h1 {
 .outil img {
 	width: 3em;
 	height: 3em;
+	vertical-align: middle;
+}
+
+input[type="radio"] {
+	margin-top: -1px;
 	vertical-align: middle;
 }
 
