@@ -1,5 +1,5 @@
 
-:root {
+body.dark-theme {
 
 	/* Couleurs */
 	--color-background: rgb(36, 37, 37);
@@ -13,7 +13,7 @@
 	--color-info-lien-border: rgb(125, 125, 125);
 	--color-info-lien-background: rgb(87, 87, 87);
 	--color-info-lien-border-hover: #ccc;
-	--color-info-lien-background-hover: #aaa;
+	--color-info-lien-background-hover: #999;
 	
 	--color-barre-outils-border: rgb(218, 212, 203);
 	--color-barre-outils-background: rgb(36, 37, 37);
@@ -24,10 +24,12 @@
 	--color-regle-date-clair-font: rgb(92, 90, 86);
 }
 
-* {
+body.dark-theme * {
 	scrollbar-color: #2b2d2d #4e5151;
 }
 
-.outil:not(:first-of-type) img, .info-fermer img {
-	filter: invert(.8);
+body.dark-theme .outil:not(:first-of-type) img,
+body.dark-theme .info-fermer img {
+	-webkit-filter: invert(.8);
+	        filter: invert(.8);
 }

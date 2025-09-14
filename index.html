@@ -11,6 +11,7 @@
 		<link rel="icon" sizes="128x128" href="assets/coindesmaths.webp">
 		<script type="text/javascript" src="data.json"></script>
 		<script type="text/javascript" src="script.js"></script>
+		<script type="text/javascript" src="night_mode.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>
@@ -53,6 +54,34 @@
 							<p>Cette frise chronologique est une ressource libre et gratuite qui permet de visualiser l'histoire des mathématiques.</p>
 							<p>Contact: <a href="https://coindesmaths.fr/contact/" title="Contact">Coin des Maths</a></p>
 							<p>2024 - <a href="https://coindesmaths.fr" title="Coin des Maths">Coin des Maths</a> - v1.5</p>
+							</div>
+							<div class="info-contenu">
+								<a class="info-fermer" href="javascript:void(0);" title="Fermer la biographie">
+									<img src="assets/croix.svg">
+								</a>
+								<h2>Paramètres</h2>
+								<form name="modeSombre">
+									<h3>Mode sombre</h3>
+									<div>
+										<label for="auto" checked>
+											<input type="radio" name="theme" id="auto" value="auto" checked />
+											Automatique
+										</label>
+									</div>
+									<div>
+										<label for="clair">
+											<input type="radio" name="theme" id="clair" value="clair" />
+											Clair
+										</label>
+									</div>
+									<div>
+										<label for="sombre">
+											<input type="radio" name="theme" id="sombre" value="sombre" />
+											Sombre
+										</label>
+									</div>
+								</form>
+							</div>
 						</div>
 					</div>
 				</dialog>
